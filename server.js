@@ -349,13 +349,26 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-// Khởi động server sau khi khởi tạo DB thành công
-const PORT = 8080;
-initDatabase().then(p => {
-    pool = p;
-    app.listen(PORT, () => {
-        console.log(`Server API running on port ${PORT} with PostgreSQL`);
+// Khởi động server (Chỉ listen cổng khi chạy cục bộ, Vercel sẽ tự động mount Express app thông qua export)
+if (!process.env.VERCEL) {
+    const PORT = 8080;
+    initDatabase().then(p => {
+        pool = p;
+        app.listen(PORT, () => {
+            console.log(`Server API running on port ${PORT} with PostgreSQL`);
+        });
+    }).catch(err => {
+        console.error("Critical database startup error:", err);
     });
-}).catch(err => {
-    console.error("Critical database startup error:", err);
-});
+} else {
+    // Trên Vercel, khởi động kết nối CSDL PostgreSQL từ xa
+    initDatabase().then(p => {
+        pool = p;
+        console.log("Vercel Database pool initialized successfully.");
+    }).catch(err => {
+        console.error("Vercel database initialization error:", err);
+    });
+}
+
+// Xuất Express app để Vercel serverless engine nhận diện và chạy
+module.exports = app;
