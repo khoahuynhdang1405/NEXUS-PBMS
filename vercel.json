@@ -4,6 +4,42 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "app.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "mobile.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "charts.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "mockData.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.doc",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.drawio",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
