@@ -1,0 +1,686 @@
+﻿
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<title>Software Requirement Specification - NEXUS PBMS</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face {
+   font-family:"Calibri";
+   panose-1:2 15 5 2 2 2 4 3 2 4;
+ }
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal {
+   margin:0in;
+   margin-bottom:.0001pt;
+   font-size:11.0pt;
+   font-family:"Calibri",sans-serif;
+ }
+ p.MsoHeader, li.MsoHeader, div.MsoHeader {
+   margin:0in;
+   margin-bottom:.0001pt;
+   font-size:9.0pt;
+   font-family:"Calibri",sans-serif;
+ }
+ p.MsoFooter, li.MsoFooter, div.MsoFooter {
+   margin:0in;
+   margin-bottom:.0001pt;
+   font-size:9.0pt;
+   font-family:"Calibri",sans-serif;
+ }
+ h1 {
+   margin-top:12.0pt;
+   margin-right:0in;
+   margin-bottom:6.0pt;
+   margin-left:0in;
+   page-break-after:avoid;
+   font-size:18.0pt;
+   font-family:"Calibri",sans-serif;
+   color:#800000;
+   font-weight:bold;
+   border-bottom:solid #1F4E78 1.5pt;
+   padding-bottom:4.0pt;
+ }
+ h2 {
+   margin-top:12.0pt;
+   margin-right:0in;
+   margin-bottom:4.0pt;
+   margin-left:0in;
+   page-break-after:avoid;
+   font-size:14.0pt;
+   font-family:"Calibri",sans-serif;
+   color:#385623;
+   font-weight:bold;
+ }
+ h3 {
+   margin-top:8.0pt;
+   margin-right:0in;
+   margin-bottom:2.0pt;
+   margin-left:0in;
+   page-break-after:avoid;
+   font-size:12.0pt;
+   font-family:"Calibri",sans-serif;
+   color:#1F4E78;
+   font-weight:bold;
+ }
+ table {
+   border-collapse:collapse;
+   margin-bottom:10.0pt;
+ }
+ th {
+   background:#F2F2F2;
+   border:solid #BFBFBF 1.0pt;
+   padding:6.0pt 9.0pt;
+   font-weight:bold;
+   font-family:"Calibri",sans-serif;
+   font-size:10.0pt;
+   text-align:left;
+ }
+ td {
+   border:solid #BFBFBF 1.0pt;
+   padding:6.0pt 9.0pt;
+   font-family:"Calibri",sans-serif;
+   font-size:10.0pt;
+   vertical-align:top;
+ }
+ 
+ @page {
+   size:8.5in 11.0in;
+   margin:1.0in 1.0in 1.0in 1.0in;
+ }
+ @page WordSection1 {
+   mso-header-margin:.5in;
+   mso-footer-margin:.5in;
+   mso-header:h1;
+   mso-footer:f1;
+ }
+ div.WordSection1 {
+   page:WordSection1;
+ }
+-->
+</style>
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<!-- Word Header Definition -->
+<div style='mso-element:header' id=h1>
+  <table border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-bottom:solid #D3D3D3 1.0pt;'>
+    <tr>
+      <td align=left style='border:none;padding:0in 0in 3px 0in;'>
+        <span style='font-size:9.0pt;font-family:"Calibri",sans-serif;color:#7F7F7F;'>&lt;NEXUS-PBMS&gt; - Software Requirement Specification</span>
+      </td>
+      <td align=right style='border:none;padding:0in 0in 3px 0in;'>
+        <span style='font-size:9.0pt;font-family:"Calibri",sans-serif;color:#7F7F7F;'>V1.0</span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- Word Footer Definition -->
+<div style='mso-element:footer' id=f1>
+  <table border=0 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-top:solid #D3D3D3 1.0pt;'>
+    <tr>
+      <td align=left style='border:none;padding:3px 0in 0in 0in;'>
+        <span style='font-size:9.0pt;font-family:"Calibri",sans-serif;color:#7F7F7F;'>06bo-BM/PM/HDCV/FSOFT v1/1</span>
+      </td>
+      <td align=right style='border:none;padding:3px 0in 0in 0in;'>
+        <span style='font-size:9.0pt;font-family:"Calibri",sans-serif;color:#7F7F7F;'><span style='mso-field-code:"PAGE"'></span>/<span style='mso-field-code:"NUMPAGES"'></span></span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- ========================================== -->
+<!-- 1. COVER PAGE -->
+<!-- ========================================== -->
+<div style='text-align:center;margin-top:50.0pt;margin-bottom:100.0pt;'>
+  <p style='margin-bottom:50.0pt;'><span style='font-size:24.0pt;font-family:"Calibri",sans-serif;color:#7F7F7F;border:solid #7F7F7F 1.5pt;padding:10.0pt 20.0pt;'>FPT SOFTWARE</span></p>
+  
+  <p style='margin-top:100.0pt;margin-bottom:10.0pt;'>
+    <span style='font-size:26.0pt;font-family:"Calibri",sans-serif;color:#800000;font-weight:bold;'>&lt;NEXUS Parking Building Management System&gt;</span>
+  </p>
+  
+  <p style='margin-bottom:120.0pt;'>
+    <span style='font-size:20.0pt;font-family:"Calibri",sans-serif;color:#5A5A5A;font-weight:normal;'>Software Requirement Specification</span>
+  </p>
+  
+  <table border=0 align=center cellpadding=3 cellspacing=0 style='margin-top:100.0pt;font-size:11.0pt;font-family:"Calibri",sans-serif;'>
+    <tr>
+      <td align=right style='border:none;font-weight:bold;color:#333;'>Project Code:</td>
+      <td align=left style='border:none;color:#333;'>&lt;NEXUS-PBMS&gt;</td>
+    </tr>
+    <tr>
+      <td align=right style='border:none;font-weight:bold;color:#333;'>Document Code:</td>
+      <td align=left style='border:none;color:#333;'>&lt;NEXUS-PBMS-SRS&gt; - V1.0</td>
+    </tr>
+  </table>
+
+  <p style='margin-top:100.0pt;font-size:11.0pt;color:#5A5A5A;'>
+    &lt;Danang, June 2026&gt;
+  </p>
+</div>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 2. RECORD OF CHANGE -->
+<!-- ========================================== -->
+<h2>RECORD OF CHANGE</h2>
+<p style='font-size:10.0pt;color:#5A5A5A;margin-bottom:10.0pt;'>* A - Added, M - Modified, D - Deleted</p>
+
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='width:100.0%;border-collapse:collapse;border:solid #BFBFBF 1.0pt;'>
+ <thead>
+  <tr>
+   <th width="15%">Effective Date</th>
+   <th width="20%">Changed Items</th>
+   <th width="10%">A*, M, D</th>
+   <th width="45%">Change Description</th>
+   <th width="10%">New Version</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>24/05/2026</td>
+   <td>Initial Release</td>
+   <td align=center>A</td>
+   <td>Initial draft of the Software Requirement Specification.</td>
+   <td align=center>V0.1</td>
+  </tr>
+  <tr>
+   <td>25/06/2026</td>
+   <td>Database Architecture</td>
+   <td align=center>M</td>
+   <td>Migrated data management from local state file (state.json) to PostgreSQL relational database.</td>
+   <td align=center>V0.8</td>
+  </tr>
+  <tr>
+   <td>29/06/2026</td>
+   <td>User Roles & Search</td>
+   <td align=center>M</td>
+   <td>Implemented Admin/Staff role segregation, Sender list filter/search, and fixed Android connection sync.</td>
+   <td align=center>V1.0</td>
+  </tr>
+ </tbody>
+</table>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 3. SIGNATURE PAGE -->
+<!-- ========================================== -->
+<h2>SIGNATURE PAGE</h2>
+<br><br>
+
+<table border=0 cellspacing=0 cellpadding=10 width="100%" style='border:none;font-size:11.0pt;'>
+ <tr>
+  <td width="30%" style='border:none;font-weight:bold;'>ORIGINATOR:</td>
+  <td width="70%" style='border:none;'>
+    Name: &lt;NEXUS Development Team&gt; ___________ Date: &lt;29/06/2026&gt;<br>
+    Position: &lt;Developer&gt;
+  </td>
+ </tr>
+ <tr><td colspan=2 style='border:none;'><br></td></tr>
+ <tr>
+  <td style='border:none;font-weight:bold;'>REVIEWERS:</td>
+  <td style='border:none;'>
+    Name: &lt;QA Department&gt; ___________ Date: &lt;29/06/2026&gt;<br>
+    Position: &lt;QA Lead&gt;<br><br>
+    Name: &lt;Technical Architect&gt; ___________ Date: &lt;29/06/2026&gt;<br>
+    Position: &lt;Reviewer&gt;
+  </td>
+ </tr>
+ <tr><td colspan=2 style='border:none;'><br></td></tr>
+ <tr>
+  <td style='border:none;font-weight:bold;'>APPROVAL:</td>
+  <td style='border:none;'>
+    Name: &lt;Project Manager&gt; ___________ Date: &lt;29/06/2026&gt;<br>
+    Position: &lt;PM&gt;
+  </td>
+ </tr>
+</table>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 4. TABLE OF CONTENTS -->
+<!-- ========================================== -->
+<h2>TABLE OF CONTENTS</h2>
+<p style='line-height:2.0;font-size:11.0pt;'>
+  <b>1 INTRODUCTION</b> .......................................................................................................................... 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1.1 Purpose ...................................................................................................................................... 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1.2 Scope ......................................................................................................................................... 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1.3 Definitions, Acronyms, and Abbreviations ............................................................................... 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1.4 References ................................................................................................................................... 5<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;1.5 Overview .................................................................................................................................... 6<br>
+  <b>2 OVERALL DESCRIPTION</b> ............................................................................................................... 7<br>
+  <b>3 FUNCTIONAL REQUIREMENTS</b> .................................................................................................. 8<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;3.1 Use Cases Diagram .................................................................................................................... 8<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;3.2 Use Case Specifications ............................................................................................................... 8<br>
+  <b>4 NON FUNCTIONAL REQUIREMENTS</b> ......................................................................................... 10<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.1 Usability ..................................................................................................................................... 10<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.2 Reliability ................................................................................................................................... 10<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.3 Performance ................................................................................................................................ 10<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.4 Supportability ............................................................................................................................. 11<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.5 Design Constraints ...................................................................................................................... 11<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.6 On-line User Documentation and Help System Requirements .................................................... 11<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.7 Purchased Components ............................................................................................................... 11<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.8 Interfaces ................................................................................................................................... 11<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.9 Licensing Requirements .............................................................................................................. 12<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.10 Legal, Copyright, and Other Notices .......................................................................................... 12<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;4.11 Applicable Standards ................................................................................................................. 12<br>
+  <b>5 SUPPORTING INFORMATION</b> ..................................................................................................... 13
+</p>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 5. CONTENT SECTION 1 -->
+<!-- ========================================== -->
+<h1>1 INTRODUCTION</h1>
+
+<h2>1.1 Purpose</h2>
+<p class=MsoNormal style='text-align:justify;'>This Software Requirement Specification (SRS) document defines and completely describes the functional requirements, non-functional requirements, system architecture, database structure, and communication protocols for the <b>NEXUS Parking Building Management System (PBMS)</b>. This document serves as the official technical guide for the engineering team, QA analysts, and serves as the product acceptance baseline for the Building Management Board.</p>
+
+<h2>1.2 Scope</h2>
+<p class=MsoNormal style='text-align:justify;'>The NEXUS PBMS is an automated multi-story parking management platform designed to control vehicle flows across 5 parking floors (B2, B1, G, F1, F2). The solution encompasses three core subsystems:</p>
+<ul type=disc>
+  <li style='margin-bottom:6.0pt;text-align:justify;'><b>Web Operations Dashboard</b>: A central operator console where building management can visually monitor real-time floor maps, control EV charging station parameters, process gate exit checkout invoices, adjust tariffs, and review automated revenue charts.</li>
+  <li style='margin-bottom:6.0pt;text-align:justify;'><b>Driver Mobile App</b>: A mobile application compiled as a native Android APK (built with the Capacitor framework) that allows drivers to register/login, automatically request parking spot allocation, view their digital e-Ticket QR Code, and check EV charging status in real time.</li>
+  <li style='margin-bottom:6.0pt;text-align:justify;'><b>Express Backend Server</b>: A Node.js/Express server connecting to a PostgreSQL database, exposing RESTful APIs to synchronize real-time parking states between the Web Dashboard and the Mobile App.</li>
+</ul>
+
+<h2>1.3 Definitions, Acronyms, and Abbreviations</h2>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;'>
+  <thead>
+    <tr>
+      <th width="30%">Acronym / Term</th>
+      <th>Definition / Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>PBMS</b></td>
+      <td>Parking Building Management System (Hệ thống Quản lý Tòa nhà Đỗ xe).</td>
+    </tr>
+    <tr>
+      <td><b>ANPR</b></td>
+      <td>Automatic Number Plate Recognition (Simulated gate camera scanning license plates).</td>
+    </tr>
+    <tr>
+      <td><b>EV</b></td>
+      <td>Electric Vehicle.</td>
+    </tr>
+    <tr>
+      <td><b>e-Ticket</b></td>
+      <td>Electronic Parking Ticket displayed as a QR Code.</td>
+    </tr>
+    <tr>
+      <td><b>PostgreSQL</b></td>
+      <td>Relational Database Management System storing users, floors, slots, and vehicle logs.</td>
+    </tr>
+    <tr>
+      <td><b>Capacitor</b></td>
+      <td>Hybrid app runtime tool converting Web code into a native Android package.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>1.4 References</h2>
+<p class=MsoNormal style='text-align:justify;'>
+- PostgreSQL Database Connection: <code>postgresql://postgres:12345@localhost:5432/nexus_parking</code><br>
+- Express API server port: 8080<br>
+- API Tunneling URL: <code>https://quouis.serveousercontent.com</code> (managed via live Serveo tunnel)<br>
+- UI Theme Specs: Cyberpunk Dark Mode style guidelines.
+</p>
+
+<h2>1.5 Overview</h2>
+<p class=MsoNormal style='text-align:justify;'>This document is organized into five main sections. Chapter 1 introduces the system. Chapter 2 outlines the client-server architecture and role permissions. Chapter 3 specifies the core use cases and flows. Chapter 4 documents the non-functional criteria. Chapter 5 details supporting information, including the relational database schemas and rates configuration.</p>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 6. CONTENT SECTION 2 -->
+<!-- ========================================== -->
+<h1>2 OVERALL DESCRIPTION</h1>
+<p class=MsoNormal style='text-align:justify;'>The NEXUS PBMS is built as a Client-Server application, with all data transactions consolidated in a PostgreSQL database. Changes to parking slot configurations, rates, and occupancy are synced dynamically to the client Web Dashboard and Android App via regular 2-second HTTP polling loops.</p>
+
+<h3>User Roles & Access Permissions:</h3>
+<ul type=disc>
+  <li style='margin-bottom:6.0pt;text-align:justify;'><b>Administrator (Admin)</b>: Full system administrator. Has access to all dashboard functions, settings, and analytics. Admins can view user directories (separated into Staff and Driver lists) and promote/demote user roles at any time.</li>
+  <li style='margin-bottom:6.0pt;text-align:justify;'><b>Staff</b>: Operational staff. Can access the core visual floor maps and the <b>Sender Management</b> tab to monitor parkings, review logs, and search for vehicles. Staff cannot access Settings or Analytics, and in the user table, they can only see Driver accounts (Admin and other Staff details are hidden).</li>
+  <li style='margin-bottom:6.0pt;text-align:justify;'><b>Driver (User)</b>: Customer who registers and logs in on the Android mobile app to check in, receive assigned slots, monitor live parking fees, and checkout using QR codes.</li>
+</ul>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 7. CONTENT SECTION 3 -->
+<!-- ========================================== -->
+<h1>3 FUNCTIONAL REQUIREMENTS</h1>
+
+<h2>3.1 Use Cases Diagram</h2>
+<p class=MsoNormal style='text-align:justify;'>Below is the textual representation of the core Use Case relationships:</p>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;'>
+  <thead>
+    <tr>
+      <th width="30%">Actor</th>
+      <th>Permitted Use Cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Driver (Mobile App)</b></td>
+      <td>Register, Login, Request Spot Allocation (Check-in), Track Live Bill, Display e-Ticket QR Code.</td>
+    </tr>
+    <tr>
+      <td><b>Staff (Operator Web)</b></td>
+      <td>Login, Monitor Floor Grid Maps, View Sender Management List, Search Driver/Vehicle, View Security Logs.</td>
+    </tr>
+    <tr>
+      <td><b>Admin (Full Web Dashboard)</b></td>
+      <td>All Staff privileges, plus: Edit Rates, Manage User Roles (Promote/Demote), View Revenue Analytics Charts.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3.2 Use Case Specifications</h2>
+
+<h3>UC01: Automated Spot Allocation (Check-in)</h3>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;margin-bottom:15.0pt;'>
+  <tr>
+    <td width="25%" style='background:#F2F2F2;font-weight:bold;'>Use-case No.</td>
+    <td width="25%">&lt;UC01&gt;</td>
+    <td width="25%" style='background:#F2F2F2;font-weight:bold;'>Use-case Version</td>
+    <td width="25%">&lt;1.0&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Use-case Name</td>
+    <td colspan=3>&lt;Automated Spot Allocation (Check-in)&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Author</td>
+    <td colspan=3>&lt;NEXUS Dev Team&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Date</td>
+    <td>24/06/2026</td>
+    <td style='background:#F2F2F2;font-weight:bold;'>Priority</td>
+    <td>&lt;High&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Actors</td>
+    <td colspan=3>&lt;Driver (Mobile App), Operator (Admin/Staff Web UI)&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Summary</td>
+    <td colspan=3>&lt;A driver requests parking. The system checks the license plate, scans for a vacant parking slot matching the vehicle category, updates the slot state, and opens the entry gate barrier.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Goal</td>
+    <td colspan=3>&lt;To fully automate the check-in process, allocating parking spots efficiently without manual operator overhead.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Triggers</td>
+    <td colspan=3>&lt;Driver submits check-in form on the Mobile App, or ANPR camera detects plate at Gate A.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Preconditions</td>
+    <td colspan=3>&lt;At least one parking spot is vacant and available in the building.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Postconditions</td>
+    <td colspan=3>&lt;The allocated slot status is set to "occupied", vehicle details are linked to the driver's username, and the e-Ticket is generated.&gt;</td>
+  </tr>
+</table>
+
+<p><b>Main Success Scenario:</b></p>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;margin-bottom:10.0pt;'>
+  <thead>
+    <tr>
+      <th width="10%">Step</th>
+      <th width="45%">Actor Actions</th>
+      <th width="45%">System Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align=center>1</td>
+      <td>Driver inputs license plate (e.g. 30A-123.45) and selects vehicle type (Car, SUV, EV, Motorbike, Handicap).</td>
+      <td>System validates plate input format and performs duplicate plate verification.</td>
+    </tr>
+    <tr>
+      <td align=center>2</td>
+      <td>Driver submits the check-in request.</td>
+      <td>System searches database for a vacant spot in the preferred zone. If full, it searches the standard Car zone, and then falls back to any available spot.</td>
+    </tr>
+    <tr>
+      <td align=center>3</td>
+      <td>Driver views the allocated slot details.</td>
+      <td>System updates slot status to "occupied", sets check-in timestamp, links driver's username, and increments occupied slots.</td>
+    </tr>
+    <tr>
+      <td align=center>4</td>
+      <td>Driver moves vehicle into the parking building.</td>
+      <td>System opens the entry barrier for 3 seconds and generates the e-Ticket QR Code with a mini-navigation map.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><b>Alternative Scenario:</b><br>
+If the selected category zone is fully occupied, the system search falls back to standard Car slots. If those are also occupied, it allocates any random vacant slot in the entire parking garage.</p>
+
+<p><b>Exceptions:</b><br>
+<b>Duplicate Plate Error</b>: If the plate is already parked, system rejects entry and displays a red warning: <i>"Lỗi: Xe mang biển số [Plate] đã tồn tại trong bãi (vị trí [Slot ID])"</i>.</p>
+
+<p><b>Business Rules:</b><br>
+EV charging and charging surcharge are automatically activated if an EV vehicle is parked in an EV spot equipped with a charging station.</p>
+
+<div style='page-break-before:always;'></div>
+
+<h3>UC02: Visual Check-out & Payment</h3>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;margin-bottom:15.0pt;'>
+  <tr>
+    <td width="25%" style='background:#F2F2F2;font-weight:bold;'>Use-case No.</td>
+    <td width="25%">&lt;UC02&gt;</td>
+    <td width="25%" style='background:#F2F2F2;font-weight:bold;'>Use-case Version</td>
+    <td width="25%">&lt;1.0&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Use-case Name</td>
+    <td colspan=3>&lt;Visual Check-out & Payment&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Author</td>
+    <td colspan=3>&lt;NEXUS Dev Team&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Date</td>
+    <td>24/06/2026</td>
+    <td style='background:#F2F2F2;font-weight:bold;'>Priority</td>
+    <td>&lt;High&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Actors</td>
+    <td colspan=3>&lt;Operator (Admin/Staff)&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Summary</td>
+    <td colspan=3>&lt;Operator selects an occupied slot on the Web exit panel, calculates fees, receives payment, and releases the slot.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Goal</td>
+    <td colspan=3>&lt;To quickly calculate parking duration and fees visually, complete checkout under 5 seconds, and open the exit gate.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Triggers</td>
+    <td colspan=3>&lt;Vehicle arrives at exit Gate B.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Preconditions</td>
+    <td colspan=3>&lt;The vehicle is in an occupied slot with valid check-in records.&gt;</td>
+  </tr>
+  <tr>
+    <td style='background:#F2F2F2;font-weight:bold;'>Postconditions</td>
+    <td colspan=3>&lt;Slot is marked available, payment is processed, total revenue is updated, and exit gate barrier opens.&gt;</td>
+  </tr>
+</table>
+
+<p><b>Main Success Scenario:</b></p>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;margin-bottom:10.0pt;'>
+  <thead>
+    <tr>
+      <th width="10%">Step</th>
+      <th width="45%">Actor Actions</th>
+      <th width="45%">System Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align=center>1</td>
+      <td>Operator selects the parking floor on the exit panel.</td>
+      <td>System renders the selected floor's mini occupancy map.</td>
+    </tr>
+    <tr>
+      <td align=center>2</td>
+      <td>Operator clicks on the occupied red slot.</td>
+      <td>System retrieves plate, category, duration, and displays calculated bill details.</td>
+    </tr>
+    <tr>
+      <td align=center>3</td>
+      <td>Operator receives cash/payment and clicks "Xác Nhận Thanh Toán & Mở Cổng".</td>
+      <td>System adds fee to total revenue, marks slot as available, and clears vehicle data.</td>
+    </tr>
+    <tr>
+      <td align=center>4</td>
+      <td>Vehicle exits.</td>
+      <td>System opens the exit gate barrier for 3 seconds and updates the visual maps.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><b>Exceptions:</b><br>
+<b>Database / Network Failure</b>: If the server connection drops during payment confirmation, a custom Cyberpunk-themed modal pops up to warn the operator (no native browser popups are triggered).</p>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 8. CONTENT SECTION 4 -->
+<!-- ========================================== -->
+<h1>4 NON FUNCTIONAL REQUIREMENTS</h1>
+
+<h2>4.1 Usability</h2>
+<p class=MsoNormal style='text-align:justify;'>- Giao diện người dùng mang phong cách Cyberpunk tối màu, độ tương phản cao, tối ưu hiển thị trong cabin điều hành thiếu sáng.<br>
+- Responsive hoàn toàn trên máy tính bàn (Full HD) và trình duyệt di động.<br>
+- Bản đồ tương tác 2D cho phép thực hiện thao tác check-out trực quan dưới 5 giây.</p>
+
+<h2>4.2 Reliability</h2>
+<p class=MsoNormal style='text-align:justify;'>- Trạng thái đỗ xe được đồng bộ hóa thời gian thực qua cơ chế Polling 2 giây.<br>
+- Ràng buộc tham số ID ô đỗ được giữ trong thẻ input ẩn để đảm bảo thông tin hóa đơn thanh toán không bị ghi đè do đồng bộ ngầm.<br>
+- Ứng dụng di động có cơ chế tự động chuyển sang dữ liệu Mock Data cục bộ khi mất kết nối mạng để tránh đơ giao diện.</p>
+
+<h2>4.3 Performance</h2>
+<p class=MsoNormal style='text-align:justify;'>- Thời gian phản hồi API của Express Server kết nối PostgreSQL luôn dưới 50ms.<br>
+- Bản đồ kết xuất bằng CSS Grid thuần, tải trang mượt mà 60 FPS trên cả thiết bị di động cấu hình yếu.</p>
+
+<h2>4.4 Supportability</h2>
+<p class=MsoNormal style='text-align:justify;'>- Mã nguồn sử dụng HTML/JS/CSS thuần và thư viện icon Lucide mở để dễ bảo trì.<br>
+- Ứng dụng Android được đóng gói bằng Capacitor CLI giúp dễ dàng biên dịch từ web app sang file native APK.</p>
+
+<h2>4.5 Design Constraints</h2>
+<p class=MsoNormal style='text-align:justify;'>- Ràng buộc mật khẩu người dùng: Khi thực hiện lưu trạng thái đồng bộ API POST <code>/api/state</code>, mật khẩu của người dùng được bảo toàn trong cơ sở dữ liệu PostgreSQL (không bị ghi đè giá trị <code>null</code>).<br>
+- Địa chỉ IP API mặc định trên Android tự động đồng bộ hóa thông qua địa chỉ URL tunnel Serveo (<code>https://quouis.serveousercontent.com</code>).</p>
+
+<h2>4.6 On-line User Documentation and Help System Requirements</h2>
+<p class=MsoNormal style='text-align:justify;'>Hệ thống tích hợp bảng hiển thị Terminal giả lập trên Dashboard hiển thị chi tiết nhật ký hệ thống bằng tiếng Việt.</p>
+
+<h2>4.7 Purchased Components</h2>
+<p class=MsoNormal style='text-align:justify;'>Không có thành phần thương mại mua ngoài; toàn bộ hệ thống sử dụng mã nguồn mở.</p>
+
+<h2>4.8 Interfaces</h2>
+<h3>User Interfaces</h3>
+<p class=MsoNormal style='text-align:justify;'>Web Operations Dashboard dành cho Operator/Admin và Mobile App dành cho Driver.</p>
+<h3>Hardware Interfaces</h3>
+<p class=MsoNormal style='text-align:justify;'>Giao tiếp mô phỏng camera ANPR chụp biển số lối vào và lối ra.</p>
+<h3>Software Interfaces</h3>
+<p class=MsoNormal style='text-align:justify;'>Giao thức RESTful API trao đổi dữ liệu JSON trên cổng 8080.</p>
+<h3>Communications Interfaces</h3>
+<p class=MsoNormal style='text-align:justify;'>Đồng bộ hóa dữ liệu thông qua HTTP GET/POST tại endpoint <code>/api/state</code>.</p>
+
+<h2>4.9 Licensing Requirements</h2>
+<p class=MsoNormal style='text-align:justify;'>Giấy phép mã nguồn mở MIT dành cho toàn bộ thư viện sử dụng.</p>
+
+<h2>4.10 Legal, Copyright, and Other Notices</h2>
+<p class=MsoNormal style='text-align:justify;'>Bản quyền thuộc sở hữu của Nhóm dự án NEXUS PBMS.</p>
+
+<h2>4.11 Applicable Standards</h2>
+<p class=MsoNormal style='text-align:justify;'>Áp dụng chuẩn thiết kế giao diện Material Design kết hợp chủ đề Cyberpunk, tiêu chuẩn cấu trúc CSDL quan hệ 3NF.</p>
+
+<div style='page-break-before:always;'></div>
+
+
+<!-- ========================================== -->
+<!-- 9. CONTENT SECTION 5 -->
+<!-- ========================================== -->
+<h1>5 SUPPORTING INFORMATION</h1>
+
+<h2>5.1 PostgreSQL Schema Layout</h2>
+<p class=MsoNormal style='text-align:justify;'>Các bảng dữ liệu trong PostgreSQL:</p>
+<ul type=disc>
+  <li><code>users</code>: Quản lý tài khoản. Trường: <code>id</code> (Serial PK), <code>fullname</code>, <code>username</code> (Unique), <code>password</code> (NOT NULL), <code>phone</code>, <code>address</code>, <code>role</code> (staff/driver/admin).</li>
+  <li><code>floors</code>: Quản lý tầng đỗ. Trường: <code>id</code> (PK), <code>name</code>, <code>description</code>, <code>zones</code> (JSONB), <code>layout</code> (JSONB).</li>
+  <li><code>slots</code>: Quản lý ô đỗ. Trường: <code>id</code> (PK), <code>floor_id</code> (FK), <code>row</code>, <code>col</code>, <code>status</code> (available/occupied), <code>zone_name</code>, <code>zone_type</code>.</li>
+  <li><code>slot_vehicles</code>: Quản lý thông tin xe đỗ. Trường: <code>slot_id</code> (PK, FK), <code>plate</code>, <code>type</code>, <code>check_in_date</code>, <code>check_in_time</code>, <code>check_in_raw</code>, <code>ev_charging</code>, <code>charge_progress</code>, <code>charge_speed</code>, <code>username</code> (FK).</li>
+</ul>
+
+<h2>5.2 Floor Grid Configuration</h2>
+<table border=1 cellspacing=0 cellpadding=0 width="100%" style='border-collapse:collapse;border:solid #BFBFBF 1.0pt;'>
+  <thead>
+    <tr>
+      <th>Floor ID</th>
+      <th>Floor Name</th>
+      <th>Rows</th>
+      <th>Cols</th>
+      <th>Driveway Rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>B2</td><td>Basement Floor B2</td><td>7</td><td>8</td><td>4</td></tr>
+    <tr><td>B1</td><td>Basement Floor B1</td><td>5</td><td>10</td><td>2</td></tr>
+    <tr><td>G</td><td>Ground Floor G</td><td>7</td><td>7</td><td>1, 4</td></tr>
+    <tr><td>F1</td><td>Level 1 Floor F1</td><td>5</td><td>8</td><td>3</td></tr>
+    <tr><td>F2</td><td>Level 2 Floor F2</td><td>5</td><td>7</td><td>2</td></tr>
+  </tbody>
+</table>
+
+<h2>5.3 Active Parking Tariffs</h2>
+<ul type=disc>
+  <li>Standard Car: 20,000 VND / hour</li>
+  <li>SUV / Large Vehicle: 30,000 VND / hour</li>
+  <li>Electric Vehicle (EV): 20,000 VND / hour (EV charging surcharge: 15,000 VND / hour)</li>
+  <li>Motorbike: 5,000 VND / hour</li>
+  <li>Handicap / Priority: 10,000 VND / hour</li>
+</ul>
+
+</div>
+</body>
+</html>

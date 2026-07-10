@@ -1,0 +1,20 @@
+{
+  "name": "parking-building-management-system",
+  "version": "1.0.0",
+  "description": "High-fidelity, premium operations dashboard for a Parking Building Management System (PBMS)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "Nexus Team",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^8.4.0",
+    "@capacitor/cli": "^8.4.0",
+    "@capacitor/core": "^8.4.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pg": "^8.22.0"
+  }
+}

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <script>
+        // Tự động chuyển hướng sang mobile.html nếu chạy trên ứng dụng Android (Capacitor)
+        if (window.Capacitor || 
+            window.location.origin.startsWith('capacitor://') || 
+            window.location.origin === 'http://localhost' || 
+            window.location.pathname.includes('android_asset')) {
+            window.location.href = 'mobile.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Hệ thống Quản lý Tòa nhà Đỗ xe</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Màn hình Đăng nhập (Admin Login Screen) -->
+    <div id="login-screen" class="login-overlay">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-circle"><i data-lucide="parking-square"></i></div>
+                <h2>NEXUS PARKING</h2>
+                <p>Hệ thống Quản lý Tòa nhà Đỗ xe Thông minh</p>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-username">Tài khoản</label>
+                    <div class="input-with-icon">
+                        <i data-lucide="user"></i>
+                        <input type="text" id="login-username" placeholder="Nhập tài khoản..." required
+                            autocomplete="username">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Mật khẩu</label>
+                    <div class="input-with-icon">
+                        <i data-lucide="lock"></i>
+                        <input type="password" id="login-password" placeholder="Nhập mật khẩu..." required
+                            autocomplete="current-password">
+                    </div>
+                </div>
+                <div id="login-error" class="error-msg-box hidden">Tài khoản hoặc mật khẩu không chính xác!</div>
+                <button type="submit" class="btn-action">
+                    Đăng Nhập <i data-lucide="log-in" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+                </button>
+                <div class="role-divider"><span>Hoặc đăng nhập nhanh dành cho</span></div>
+                <div class="quick-roles-grid">
+                    <button type="button" class="btn-role-quick" id="btn-quick-driver" style="grid-column: 1 / span 2;">
+                        <i data-lucide="car"></i> Khách gửi (Driver)
+                    </button>
+                </div>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="#" id="link-open-register"
+                        style="color: var(--accent-color); font-size: 12px; text-decoration: none; font-weight: 600;">
+                        <i data-lucide="user-plus"
+                            style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i> Đăng ký
+                        tài khoản khách gửi (Driver)
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Thanh điều hướng Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <i data-lucide="parking-square"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>NEXUS</h1>
+                    <span>BÃI ĐỖ THÔNG MINH</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active" data-tab="dashboard">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span>Bảng Điều Khiển</span>
+                    </li>
+                    <li class="nav-item" data-tab="floormap">
+                        <i data-lucide="map"></i>
+                        <span>Sơ Đồ Mặt Bằng</span>
+                    </li>
+                    <li class="nav-item" data-tab="evcharging">
+                        <i data-lucide="zap"></i>
+                        <span>Trạm Sạc EV</span>
+                        <span class="badge active-charging" id="ev-charging-badge">8</span>
+                    </li>
+                    <li class="nav-item" data-tab="gatecontrol">
+                        <i data-lucide="door-closed"></i>
+                        <span>Check-in / Check-out</span>
+                    </li>
+                    <li class="nav-item" data-tab="analytics">
+                        <i data-lucide="bar-chart-3"></i>
+                        <span>Báo Cáo Thống Kê</span>
+                    </li>
+                    <li class="nav-item" data-tab="settings">
+                        <i data-lucide="sliders"></i>
+                        <span>Biểu Phí Hệ Thống</span>
+                    </li>
+                    <li class="nav-item" data-tab="users">
+                        <i data-lucide="users"></i>
+                        <span>Quản Lý Người Gửi</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">QT</div>
+                    <div class="user-info">
+                        <span class="name">Admin #208</span>
+                        <span class="role">Quản trị hệ thống</span>
+                    </div>
+                </div>
+                <button class="logout-btn" title="Khởi động lại hệ thống" onclick="window.location.reload();">
+                    <i data-lucide="power"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Khung làm việc chính -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <header class="content-header">
+                <div class="header-left">
+                    <h2 id="view-title">Bảng Điều Khiển Chung</h2>
+                    <p id="view-subtitle" class="text-secondary">Theo dõi trạng thái bãi đỗ xe và hệ thống điều hành
+                        thời gian thực.</p>
+                </div>
+                <div class="header-right">
+                    <div class="system-status">
+                        <span class="status-indicator online"></span>
+                        <span>HỆ THỐNG ONLINE</span>
+                    </div>
+                    <div class="header-divider"></div>
+                    <div class="live-clock">
+                        <i data-lucide="clock"></i>
+                        <span id="current-time">12:00:00 CH</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard View -->
+            <div id="tab-dashboard" class="tab-panel active">
+                <!-- KPI Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Tỉ Lệ Lấp Đầy</span>
+                            <div class="stat-icon-wrapper cyan"><i data-lucide="pie-chart"></i></div>
+                        </div>
+                        <div class="stat-value-container">
+                            <span class="stat-value" id="kpi-occupancy">68%</span>
+                            <span class="stat-subtext text-success" id="kpi-occupancy-sub"><i
+                                    data-lucide="arrow-down-right"></i> -2.4% so với giờ trước</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill cyan-glow" id="kpi-occupancy-bar" style="width: 68%;"></div>
+                        </div>
+                        <div class="stat-footer-metrics">
+                            <span>Đang đỗ: <strong id="kpi-occupied-spots">76</strong></span>
+                            <span>Tổng ô đỗ: <strong id="kpi-total-spots">112</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Trạm Sạc EV Hoạt Động</span>
+                            <div class="stat-icon-wrapper green"><i data-lucide="zap"></i></div>
+                        </div>
+                        <div class="stat-value-container">
+                            <span class="stat-value" id="kpi-ev-active">8 / 28</span>
+                            <span class="stat-subtext text-warning" id="kpi-ev-load">Tổng tải: 88.4 kW</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill green-glow" id="kpi-ev-bar" style="width: 28.5%;"></div>
+                        </div>
+                        <div class="stat-footer-metrics">
+                            <span>Công suất TB: <strong>11 kW</strong></span>
+                            <span>Giảm phát thải: <strong>140 kg CO2</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Doanh Thu Trong Ngày</span>
+                            <div class="stat-icon-wrapper purple"><i data-lucide="coins"></i></div>
+                        </div>
+                        <div class="stat-value-container">
+                            <span class="stat-value" id="kpi-revenue">1,820,000đ</span>
+                            <span class="stat-subtext text-success" id="kpi-revenue-sub"><i
+                                    data-lucide="arrow-up-right"></i> +12% hôm nay</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill purple-glow" style="width: 78%;"></div>
+                        </div>
+                        <div class="stat-footer-metrics">
+                            <span>Chỉ tiêu ngày: <strong>2.5Mđ</strong></span>
+                            <span>Doanh thu TB/giờ: <strong>227kđ</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-title">Sức Khỏe Hệ Thống</span>
+                            <div class="stat-icon-wrapper blue"><i data-lucide="shield-check"></i></div>
+                        </div>
+                        <div class="stat-value-container">
+                            <span class="stat-value">99.8%</span>
+                            <span class="stat-subtext text-success">Mọi dịch vụ bình thường</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill blue-glow" style="width: 99.8%;"></div>
+                        </div>
+                        <div class="stat-footer-metrics">
+                            <span>Cổng hoạt động: <strong>4 / 4</strong></span>
+                            <span>Lỗi ghi nhận: <strong class="text-danger" id="kpi-err-count">1</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Content Layout -->
+                <div class="dashboard-layout">
+                    <!-- Floor Breakdown Panel -->
+                    <div class="dashboard-panel floor-status-list">
+                        <div class="panel-header">
+                            <h3><i data-lucide="layers"></i> Cơ Cấu Tầng Đỗ Xe</h3>
+                        </div>
+                        <div class="panel-content scrollable">
+                            <div id="dashboard-floors-list" class="floors-summary-container">
+                                <!-- Điền tự động bởi app.js -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Notification / Alerts Console -->
+                    <div class="dashboard-panel terminal-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="terminal"></i> Nhật Ký Hoạt Động & Cảnh Báo An Ninh</h3>
+                            <button class="clear-terminal-btn" id="btn-clear-alerts" title="Xóa nhật ký"><i
+                                    data-lucide="trash-2"></i></button>
+                        </div>
+                        <div class="panel-content terminal-content" id="alerts-console">
+                            <!-- Điền tự động bởi app.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floor Layouts View -->
+            <div id="tab-floormap" class="tab-panel">
+                <div class="floor-view-container">
+                    <!-- Floor Controls Header -->
+                    <div class="floor-controls-bar">
+                        <div class="floor-selector-buttons" id="floor-buttons-container">
+                            <!-- Điền tự động -->
+                        </div>
+                        <div class="legend-container">
+                            <div class="legend-item"><span class="legend-color available"></span><span>Còn trống</span>
+                            </div>
+                            <div class="legend-item"><span class="legend-color occupied"></span><span>Đã đỗ xe</span>
+                            </div>
+                            <div class="legend-item"><span class="legend-color reserved"></span><span>Đã đặt
+                                    trước</span></div>
+                            <div class="legend-item"><span class="legend-color maintenance"></span><span>Bảo trì</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Panel Grid Layout -->
+                    <div class="map-grid-layout">
+                        <!-- Interactive 2D Map -->
+                        <div class="map-wrapper dashboard-panel">
+                            <div class="panel-header map-title-header">
+                                <div class="title-details">
+                                    <h3 id="current-floor-title">Sơ đồ tầng</h3>
+                                    <span id="current-floor-desc" class="text-secondary"></span>
+                                </div>
+                                <div class="floor-occupancy-badge" id="floor-occupancy-pct">0% Đầy</div>
+                            </div>
+                            <div class="panel-content map-canvas-container">
+                                <!-- Visual Map Render Area -->
+                                <div id="interactive-floor-map" class="interactive-map">
+                                    <!-- Điền tự động bởi app.js -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Spot Inspector Panel -->
+                        <div class="spot-inspector dashboard-panel">
+                            <div class="panel-header">
+                                <h3><i data-lucide="eye"></i> Chi Tiết Ô Đỗ</h3>
+                            </div>
+                            <div class="panel-content" id="spot-inspector-content">
+                                <div class="empty-inspector-state">
+                                    <i data-lucide="mouse-pointer-click"></i>
+                                    <p>Vui lòng chọn bất kỳ ô đỗ nào trên sơ đồ để kiểm tra chi tiết thông tin và thực
+                                        hiện các thao tác quản lý.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EV Stations View -->
+            <div id="tab-evcharging" class="tab-panel">
+                <div class="ev-view-grid">
+                    <!-- EV Stats & Metrics -->
+                    <div class="ev-stats-panel dashboard-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="gauge"></i> Thông Số Trạm Sạc EV</h3>
+                        </div>
+                        <div class="panel-content">
+                            <div class="ev-telemetry-grid">
+                                <div class="telemetry-card">
+                                    <span class="telemetry-label">Công suất sạc hiện tại</span>
+                                    <span class="telemetry-value" id="ev-total-load">88.4 kW</span>
+                                    <div class="mini-load-bar">
+                                        <div class="mini-load-fill" style="width: 45%;"></div>
+                                    </div>
+                                </div>
+                                <div class="telemetry-card">
+                                    <span class="telemetry-label">Điện năng cung cấp hôm nay</span>
+                                    <span class="telemetry-value">348.2 kWh</span>
+                                </div>
+                                <div class="telemetry-card">
+                                    <span class="telemetry-label">Số cổng sạc khả dụng</span>
+                                    <span class="telemetry-value" id="ev-avail-count">20 / 28</span>
+                                </div>
+                                <div class="telemetry-card">
+                                    <span class="telemetry-label">Giảm phát thải khí CO2</span>
+                                    <span class="telemetry-value text-success">140.8 kg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active EV Chargers List -->
+                    <div class="ev-chargers-list-panel dashboard-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="battery-charging"></i> Trạng Thái Trạm Sạc Thời Gian Thực (Toàn Tòa Nhà)
+                            </h3>
+                        </div>
+                        <div class="panel-content scrollable">
+                            <div class="ev-chargers-grid" id="ev-chargers-status-grid">
+                                <!-- Tải động danh sách cổng sạc -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gate Entry/Exit Simulator View -->
+            <div id="tab-gatecontrol" class="tab-panel">
+                <div class="gate-simulator-grid">
+                    <!-- Entrance Gate A -->
+                    <div class="dashboard-panel gate-card">
+                        <div class="panel-header gate-header">
+                            <h3><i data-lucide="log-in" class="text-success"></i> Cổng A - Lối Vào Tòa Nhà</h3>
+                            <span class="badge gate-status online">Thanh Chắn Đóng</span>
+                        </div>
+                        <div class="panel-content">
+                            <!-- Camera simulator -->
+                            <div class="camera-simulator entry-cam">
+                                <div class="camera-lens-overlay"></div>
+                                <div class="camera-scan-line"></div>
+                                <div class="camera-screen-content">
+                                    <span class="cam-label">CAM 01 - CỔNG VÀO A</span>
+                                    <div class="ocr-bounding-box" id="entry-ocr-box">
+                                        <div class="ocr-brackets"></div>
+                                        <span class="detected-plate" id="entry-ocr-plate">QUÉT BIỂN SỐ ANPR</span>
+                                    </div>
+                                    <span class="cam-fps">30 FPS // H.265</span>
+                                </div>
+                            </div>
+
+                            <!-- Control Actions / Check-In Forms -->
+                            <div class="gate-form-wrapper">
+                                <h4>Hệ Thống Đăng Ký Vào Bãi</h4>
+                                <form id="form-gate-checkin">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="checkin-plate">Biển kiểm soát</label>
+                                            <input type="text" id="checkin-plate" placeholder="Ví dụ: 30A-999.99"
+                                                uppercase required>
+                                            <button type="button" class="btn-secondary" id="btn-scan-random"
+                                                title="Mô phỏng quét ANPR">
+                                                <i data-lucide="scan"></i> Quét Ngẫu Nhiên
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="checkin-type">Loại Phương Tiện</label>
+                                            <select id="checkin-type">
+                                                <option value="car">Ô tô tiêu chuẩn</option>
+                                                <option value="suv">SUV / Xe cỡ lớn</option>
+                                                <option value="ev">Ô tô điện (EV)</option>
+                                                <option value="motorbike">Xe máy</option>
+                                                <option value="handicap">Xe ưu tiên / Khuyết tật</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn-primary" id="btn-gate-checkin-submit">
+                                            <i data-lucide="arrow-right-circle"></i> Đăng Ký Vào Bãi & Cấp Vị Trí
+                                        </button>
+                                    </div>
+                                </form>
+                                <div id="checkin-response-log" class="response-message-box"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exit Gate B -->
+                    <div class="dashboard-panel gate-card">
+                        <div class="panel-header gate-header">
+                            <h3><i data-lucide="log-out" class="text-danger"></i> Cổng B - Lối Ra & Thu Ngân</h3>
+                            <span class="badge gate-status online">Thanh Chắn Đóng</span>
+                        </div>
+                        <div class="panel-content">
+                            <!-- Camera simulator -->
+                            <div class="camera-simulator exit-cam">
+                                <div class="camera-lens-overlay"></div>
+                                <div class="camera-scan-line"></div>
+                                <div class="camera-screen-content">
+                                    <span class="cam-label">CAM 02 - CỔNG RA B</span>
+                                    <div class="ocr-bounding-box" id="exit-ocr-box">
+                                        <div class="ocr-brackets"></div>
+                                        <span class="detected-plate" id="exit-ocr-plate">QUÉT BIỂN SỐ ANPR</span>
+                                    </div>
+                                    <span class="cam-fps">30 FPS // H.265</span>
+                                </div>
+                            </div>
+
+                            <!-- Exit Check-Out Form -->
+                            <div class="gate-form-wrapper">
+                                <h4>Thanh Toán Phí & Ra Bãi</h4>
+                                <form id="form-gate-checkout">
+                                    <input type="hidden" id="checkout-search" value="" required>
+                                    <div class="form-row">
+                                        <div class="form-group" style="width: 100%;">
+                                            <label>Biển kiểm soát hoặc Vị trí đỗ (Chọn trên sơ đồ tầng)</label>
+                                            <div class="checkout-map-selector-group">
+                                                <div class="checkout-floor-selector" id="checkout-floor-buttons">
+                                                    <!-- Điền tự động các nút tầng -->
+                                                </div>
+                                                <div class="checkout-map-canvas">
+                                                    <div id="checkout-map-grid" class="checkout-map-grid">
+                                                        <!-- Điền tự động sơ đồ ô đỗ mini -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="billing-summary-panel hidden" id="billing-summary">
+                                        <div class="receipt-header">HÓA ĐƠN ĐỖ XE NEXUS</div>
+                                        <div class="receipt-row"><span>Vị trí đỗ:</span><span id="bill-slot">-</span>
+                                        </div>
+                                        <div class="receipt-row"><span>Biển số xe:</span><span id="bill-plate">-</span>
+                                        </div>
+                                        <div class="receipt-row"><span>Thời gian vào:</span><span
+                                                id="bill-checkin">-</span></div>
+                                        <div class="receipt-row"><span>Thời gian ra:</span><span
+                                                id="bill-checkout">-</span></div>
+                                        <div class="receipt-row"><span>Thời gian đỗ:</span><span
+                                                id="bill-duration">-</span></div>
+                                        <div class="receipt-row border-top"><span>Phí cơ bản:</span><span
+                                                id="bill-base">-</span></div>
+                                        <div class="receipt-row text-success" id="bill-ev-surcharge-row"><span>Phụ phí
+                                                sạc điện EV:</span><span id="bill-ev-surcharge">-</span></div>
+                                        <div class="receipt-row grand-total"><span>Tổng số tiền:</span><span
+                                                id="bill-total">-</span></div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn-primary" id="btn-gate-checkout-submit"
+                                            disabled>
+                                            <i data-lucide="check-square"></i> Xác Nhận Thanh Toán & Mở Cổng
+                                        </button>
+                                    </div>
+                                </form>
+                                <div id="checkout-response-log" class="response-message-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics View -->
+            <div id="tab-analytics" class="tab-panel">
+                <div class="analytics-grid">
+                    <!-- Occupancy Trend -->
+                    <div class="dashboard-panel chart-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="trending-up"></i> Xu Hướng Lấp Đầy (12 Giờ Qua)</h3>
+                        </div>
+                        <div class="panel-content chart-container" id="analytics-occupancy-chart">
+                            <!-- Vẽ biểu đồ Area SVG động tại đây -->
+                        </div>
+                    </div>
+
+                    <!-- Revenue Breakdown -->
+                    <div class="dashboard-panel chart-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="bar-chart-2"></i> Xu Hướng Doanh Thu Hàng Ngày (VND)</h3>
+                        </div>
+                        <div class="panel-content chart-container" id="analytics-revenue-chart">
+                            <!-- Vẽ biểu đồ cột Bar SVG động tại đây -->
+                        </div>
+                    </div>
+
+                    <!-- Vehicle Type Doughnut -->
+                    <div class="dashboard-panel chart-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="pie-chart"></i> Cơ Cấu Chủng Loại Xe Đang Đỗ</h3>
+                        </div>
+                        <div class="panel-content chart-container doughnut-container" id="analytics-vehicle-chart">
+                            <!-- Vẽ biểu đồ bánh Doughnut SVG động tại đây -->
+                        </div>
+                    </div>
+
+                    <!-- Occupancy Statistics Report -->
+                    <div class="dashboard-panel table-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="table"></i> Chi Tiết Dữ Liệu Theo Tầng</h3>
+                        </div>
+                        <div class="panel-content">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Tầng</th>
+                                        <th>Tổng Ô Đỗ</th>
+                                        <th>Đang Đỗ</th>
+                                        <th>Đặt Trước</th>
+                                        <th>Đang Bảo Trì</th>
+                                        <th>Còn Trống</th>
+                                        <th>Tỉ Lệ Lấp Đầy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="analytics-table-body">
+                                    <!-- Hàng dữ liệu động -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Rates (Settings) View -->
+            <div id="tab-settings" class="tab-panel">
+                <div class="settings-container">
+                    <div class="dashboard-panel settings-card">
+                        <div class="panel-header">
+                            <h3><i data-lucide="settings-2"></i> Quản Lý Biểu Phí Đỗ Xe</h3>
+                        </div>
+                        <div class="panel-content">
+                            <p class="text-secondary mb-4">Thiết lập đơn giá đỗ xe theo giờ cho các loại phương tiện.
+                                Thay đổi này sẽ được áp dụng trực tiếp cho các lượt xe ra và thanh toán mới.</p>
+
+                            <form id="form-rates-admin">
+                                <div class="settings-form-grid">
+                                    <div class="form-group">
+                                        <label for="rate-car">Ô tô tiêu chuẩn (VND / giờ)</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="rate-car" min="0" required>
+                                            <span class="unit">đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rate-suv">SUV / Xe cỡ lớn (VND / giờ)</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="rate-suv" min="0" required>
+                                            <span class="unit">đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rate-ev">Ô tô điện EV - Phí cơ bản (VND / giờ)</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="rate-ev" min="0" required>
+                                            <span class="unit">đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rate-motorbike">Xe máy (VND / giờ)</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="rate-motorbike" min="0" required>
+                                            <span class="unit">đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rate-handicap">Xe khuyết tật / Ưu tiên (VND / giờ)</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="rate-handicap" min="0" required>
+                                            <span class="unit">đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rate-ev-surcharge">Phụ phí sạc điện EV bổ sung (VND / giờ)</label>
+                                        <div class="input-prefix">
+                                            <input type="number" id="rate-ev-surcharge" min="0" required>
+                                            <span class="unit">đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions mt-4">
+                                    <button type="submit" class="btn-primary"><i data-lucide="save"></i> Lưu Cấu Hinh
+                                        Biểu Phí</button>
+                                    <button type="button" class="btn-secondary" id="btn-reset-data"><i
+                                            data-lucide="rotate-ccw"></i> Reset Về Cài Đặt Gốc</button>
+                                </div>
+                            </form>
+                            <div id="settings-response-log" class="response-message-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Management View (Admin-only) -->
+            <div id="tab-users" class="tab-panel">
+                <div class="users-container" style="max-width: 1000px;">
+                    <div class="dashboard-panel">
+                        <div class="panel-header">
+                            <h3><i data-lucide="users"></i> Danh Sách Tài Khoản Khách Gửi Xe</h3>
+                        </div>
+                        <div class="panel-content scrollable">
+                            <!-- Bộ lọc tài khoản cho Admin (Staff vs Driver) -->
+                            <div id="users-filters-group" class="user-filters-group" style="margin-bottom: 20px; display: flex; gap: 10px;">
+                                <button class="btn-filter-user active" id="btn-filter-users-driver" data-filter="driver" style="padding: 8px 16px; background: rgba(0, 243, 255, 0.1); border: 1px solid var(--accent-color); color: var(--accent-color); border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s;">
+                                    <i data-lucide="users" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 6px;"></i> Khách Gửi Xe (Driver)
+                                </button>
+                                <button class="btn-filter-user" id="btn-filter-users-staff" data-filter="staff" style="padding: 8px 16px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); color: var(--text-secondary); border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s;">
+                                    <i data-lucide="shield" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 6px;"></i> Nhân Viên (Staff)
+                                </button>
+                            </div>
+                            
+                            <!-- Hộp tìm kiếm nhanh -->
+                            <div class="search-box-container" style="margin-bottom: 20px; max-width: 440px; display: flex; gap: 8px;">
+                                <div style="position: relative; flex: 1;">
+                                    <i data-lucide="search" style="position: absolute; left: 12px; top: 11px; width: 16px; height: 16px; color: var(--text-muted);"></i>
+                                    <input type="text" id="input-search-users" placeholder="Tìm kiếm tên, tài khoản, SĐT, biển số xe..." style="width: 100%; height: 38px; padding: 0 14px 0 38px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-size: 13px; outline: none; transition: 0.3s;">
+                                </div>
+                                <button id="btn-clear-search-users" style="height: 38px; width: 38px; display: flex; align-items: center; justify-content: center; background: rgba(255, 0, 85, 0.1); border: 1px solid rgba(255, 0, 85, 0.2); color: var(--color-error); border-radius: 6px; cursor: pointer; transition: 0.3s;" title="Xóa tìm kiếm">
+                                    <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+                                </button>
+                            </div>
+
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Họ và Tên</th>
+                                        <th>Tài Khoản</th>
+                                        <th>Số Điện Thoại</th>
+                                        <th>Địa Chỉ Nhà</th>
+                                        <th>Biển Số Xe</th>
+                                        <th>Vị Trí Đỗ</th>
+                                        <th>Vai Trò</th>
+                                        <th id="col-users-action" style="display:none;">Hành Động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="users-table-body">
+                                    <!-- Load động tài khoản khách đăng ký -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Đăng Ký Tài Khoản Khách Gửi -->
+    <div id="register-modal" class="login-overlay hidden">
+        <div class="login-card" style="width: 440px;">
+            <div class="login-header">
+                <div class="logo-circle"><i data-lucide="user-plus"></i></div>
+                <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+                <p>Tạo tài khoản Driver để sử dụng dịch vụ đỗ xe</p>
+            </div>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="reg-fullname">Họ và tên</label>
+                    <input type="text" id="reg-fullname" placeholder="Nhập họ và tên..." required
+                        style="width: 100%; height: 40px; padding: 8px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 13px;">
+                </div>
+                <div class="input-group">
+                    <label for="reg-phone">Số điện thoại</label>
+                    <input type="text" id="reg-phone" placeholder="Nhập số điện thoại..." required
+                        style="width: 100%; height: 40px; padding: 8px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 13px;">
+                </div>
+                <div class="input-group">
+                    <label for="reg-address">Địa chỉ nhà</label>
+                    <input type="text" id="reg-address" placeholder="Nhập địa chỉ nhà..." required
+                        style="width: 100%; height: 40px; padding: 8px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 13px;">
+                </div>
+                <div class="input-group">
+                    <label for="reg-username">Tài khoản</label>
+                    <input type="text" id="reg-username" placeholder="Nhập tên tài khoản..." required
+                        autocomplete="username"
+                        style="width: 100%; height: 40px; padding: 8px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 13px; text-transform: none !important;">
+                </div>
+                <div class="input-group">
+                    <label for="reg-password">Mật khẩu</label>
+                    <input type="password" id="reg-password" placeholder="Nhập mật khẩu..." required
+                        autocomplete="new-password"
+                        style="width: 100%; height: 40px; padding: 8px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 13px;">
+                </div>
+                <div id="register-error" class="error-msg-box hidden" style="margin-top: 10px;"></div>
+                <div id="register-success" class="response-message-box success hidden"
+                    style="margin-top: 10px; display: none;">Đăng ký tài khoản thành công!</div>
+                <div class="form-actions" style="display: flex; gap: 10px; margin-top: 15px;">
+                    <button type="submit" class="btn-action" style="flex: 1; height: 40px;">Đăng Ký</button>
+                    <button type="button" class="btn-secondary" id="btn-close-register"
+                        style="flex: 1; margin: 0; height: 40px; font-weight: bold; border-radius: 8px; font-size: 13px;">Quay
+                        Lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script imports -->
+    <script src="mockData.js"></script>
+    <script src="charts.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

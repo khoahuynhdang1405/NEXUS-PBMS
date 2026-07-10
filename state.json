@@ -1,0 +1,3098 @@
+{
+  "floors": [
+    {
+      "id": "B2",
+      "name": "Tầng hầm B2",
+      "description": "Trạm Sạc EV & Khu Xe Máy",
+      "zones": [
+        {
+          "name": "A",
+          "type": "motorbike",
+          "count": 32
+        },
+        {
+          "name": "B",
+          "type": "ev",
+          "count": 16
+        }
+      ],
+      "slots": [
+        {
+          "id": "B2-A-01",
+          "row": 0,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "12A-211.21",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:59",
+            "checkInRaw": "2026-06-16T01:59:16.170Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-02",
+          "row": 0,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "21A-211.56",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:59",
+            "checkInRaw": "2026-06-16T01:59:31.770Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-03",
+          "row": 0,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29D-444.11",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:04",
+            "checkInRaw": "2026-06-15T21:04:56.148Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-04",
+          "row": 0,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30K-456.78",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:35",
+            "checkInRaw": "2026-06-15T18:35:09.844Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-05",
+          "row": 0,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-666.22",
+            "type": "motorbike",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:32",
+            "checkInRaw": "2026-06-15T16:32:48.141Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-06",
+          "row": 0,
+          "col": 5,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-07",
+          "row": 0,
+          "col": 6,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-08",
+          "row": 0,
+          "col": 7,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-09",
+          "row": 1,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30K-456.78",
+            "type": "motorbike",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:47",
+            "checkInRaw": "2026-06-15T16:47:01.170Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-10",
+          "row": 1,
+          "col": 1,
+          "status": "maintenance",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-11",
+          "row": 1,
+          "col": 2,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-12",
+          "row": 1,
+          "col": 3,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-13",
+          "row": 1,
+          "col": 4,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-14",
+          "row": 1,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51K-777.66",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:24",
+            "checkInRaw": "2026-06-15T23:24:59.406Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-15",
+          "row": 1,
+          "col": 6,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-16",
+          "row": 1,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51G-888.88",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "05:39",
+            "checkInRaw": "2026-06-15T22:39:55.922Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-17",
+          "row": 2,
+          "col": 0,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-18",
+          "row": 2,
+          "col": 1,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-19",
+          "row": 2,
+          "col": 2,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-20",
+          "row": 2,
+          "col": 3,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-21",
+          "row": 2,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29F-333.44",
+            "type": "motorbike",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:21",
+            "checkInRaw": "2026-06-15T15:21:10.330Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-22",
+          "row": 2,
+          "col": 5,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-23",
+          "row": 2,
+          "col": 6,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-24",
+          "row": 2,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "98A-999.00",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "07:50",
+            "checkInRaw": "2026-06-16T00:50:56.056Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-25",
+          "row": 3,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51K-777.66",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:58",
+            "checkInRaw": "2026-06-15T17:58:08.221Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-26",
+          "row": 3,
+          "col": 1,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-27",
+          "row": 3,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:25",
+            "checkInRaw": "2026-06-15T23:25:18.286Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-28",
+          "row": 3,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30E-987.65",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:10",
+            "checkInRaw": "2026-06-16T01:10:50.542Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-29",
+          "row": 3,
+          "col": 4,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "motorbike",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-30",
+          "row": 3,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29F-333.44",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:34",
+            "checkInRaw": "2026-06-15T19:34:39.711Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-31",
+          "row": 3,
+          "col": 6,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-A-32",
+          "row": 3,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30H-876.54",
+            "type": "motorbike",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "05:24",
+            "checkInRaw": "2026-06-15T22:24:33.832Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "motorbike"
+        },
+        {
+          "id": "B2-B-33",
+          "row": 5,
+          "col": 0,
+          "status": "maintenance",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-34",
+          "row": 5,
+          "col": 1,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "ev",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-35",
+          "row": 5,
+          "col": 2,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-36",
+          "row": 5,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-666.22",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:10",
+            "checkInRaw": "2026-06-15T19:10:07.584Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-37",
+          "row": 5,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30E-987.65",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:56",
+            "checkInRaw": "2026-06-15T20:56:40.959Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-38",
+          "row": 5,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30A-123.45",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:46",
+            "checkInRaw": "2026-06-15T17:46:15.948Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-39",
+          "row": 5,
+          "col": 6,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "ev",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-40",
+          "row": 5,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51H-999.99",
+            "type": "ev",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:35",
+            "checkInRaw": "2026-06-15T14:35:09.242Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-41",
+          "row": 6,
+          "col": 0,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "ev",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-42",
+          "row": 6,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "05:36",
+            "checkInRaw": "2026-06-15T22:36:25.304Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-43",
+          "row": 6,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:59",
+            "checkInRaw": "2026-06-15T17:59:25.639Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-44",
+          "row": 6,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30H-876.54",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:44",
+            "checkInRaw": "2026-06-15T23:44:53.112Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-45",
+          "row": 6,
+          "col": 4,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-46",
+          "row": 6,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30K-456.78",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:34",
+            "checkInRaw": "2026-06-15T20:34:14.686Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-47",
+          "row": 6,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "ev",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:35",
+            "checkInRaw": "2026-06-15T15:35:52.042Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B2-B-48",
+          "row": 6,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43A-777.11",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:01",
+            "checkInRaw": "2026-06-15T21:01:12.980Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        }
+      ],
+      "layout": {
+        "rows": 7,
+        "cols": 8,
+        "driveways": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "B1",
+      "name": "Tầng hầm B1",
+      "description": "Ô Tô Tiêu Chuẩn & Sạc EV",
+      "zones": [
+        {
+          "name": "A",
+          "type": "car",
+          "count": 20
+        },
+        {
+          "name": "B",
+          "type": "ev",
+          "count": 12
+        }
+      ],
+      "slots": [
+        {
+          "id": "B1-A-01",
+          "row": 0,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:54",
+            "checkInRaw": "2026-06-15T23:54:50.829Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-02",
+          "row": 0,
+          "col": 1,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-03",
+          "row": 0,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "23A-211.21",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:59",
+            "checkInRaw": "2026-06-16T01:59:49.367Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-04",
+          "row": 0,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43A-777.11",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:24",
+            "checkInRaw": "2026-06-15T15:24:39.713Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-05",
+          "row": 0,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51L-888.55",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:14",
+            "checkInRaw": "2026-06-16T01:14:29.375Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-06",
+          "row": 0,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-977.65",
+            "type": "car",
+            "checkInDate": "24/6/2026",
+            "checkInTime": "15:32",
+            "checkInRaw": "2026-06-24T08:32:15.436Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-07",
+          "row": 0,
+          "col": 6,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-08",
+          "row": 0,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51K-777.66",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:32",
+            "checkInRaw": "2026-06-15T21:32:30.979Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-09",
+          "row": 0,
+          "col": 8,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30K-456.78",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:02",
+            "checkInRaw": "2026-06-15T17:02:31.362Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-10",
+          "row": 0,
+          "col": 9,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "21A-121.21",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "09:03",
+            "checkInRaw": "2026-06-16T02:03:28.021Z",
+            "evCharging": true,
+            "chargeProgress": 5,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-11",
+          "row": 1,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "31A-311.31",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "09:07",
+            "checkInRaw": "2026-06-16T02:07:05.076Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-12",
+          "row": 1,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "98A-999.00",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "20:39",
+            "checkInRaw": "2026-06-15T13:39:39.173Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-13",
+          "row": 1,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "31A-311.32",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "09:08",
+            "checkInRaw": "2026-06-16T02:08:12.832Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-14",
+          "row": 1,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51G-888.88",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "07:11",
+            "checkInRaw": "2026-06-16T00:11:58.020Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-15",
+          "row": 1,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-544.45",
+            "type": "car",
+            "checkInDate": "24/6/2026",
+            "checkInTime": "13:42",
+            "checkInRaw": "2026-06-24T06:42:38.725Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-16",
+          "row": 1,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43A-777.11",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:16",
+            "checkInRaw": "2026-06-15T17:16:33.103Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-17",
+          "row": 1,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-544.45",
+            "type": "car",
+            "checkInDate": "24/6/2026",
+            "checkInTime": "13:42",
+            "checkInRaw": "2026-06-24T06:42:41.318Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-18",
+          "row": 1,
+          "col": 7,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-19",
+          "row": 1,
+          "col": 8,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-A-20",
+          "row": 1,
+          "col": 9,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-544.45",
+            "type": "car",
+            "checkInDate": "24/6/2026",
+            "checkInTime": "13:42",
+            "checkInRaw": "2026-06-24T06:42:50.041Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "B1-B-21",
+          "row": 3,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:24",
+            "checkInRaw": "2026-06-15T23:24:41.428Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-22",
+          "row": 3,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:35",
+            "checkInRaw": "2026-06-15T21:35:02.821Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-23",
+          "row": 3,
+          "col": 2,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-24",
+          "row": 3,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30A-123.45",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:43",
+            "checkInRaw": "2026-06-15T17:43:23.655Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-25",
+          "row": 3,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43A-777.11",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:42",
+            "checkInRaw": "2026-06-15T21:42:42.085Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-26",
+          "row": 3,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "ev",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:40",
+            "checkInRaw": "2026-06-15T14:40:34.779Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-27",
+          "row": 4,
+          "col": 0,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-28",
+          "row": 4,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51K-777.66",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:50",
+            "checkInRaw": "2026-06-15T18:50:51.025Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-29",
+          "row": 4,
+          "col": 2,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-30",
+          "row": 4,
+          "col": 3,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-31",
+          "row": 4,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "98A-999.00",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:42",
+            "checkInRaw": "2026-06-15T20:42:07.995Z",
+            "evCharging": true,
+            "chargeProgress": 100,
+            "chargeSpeed": 22
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        },
+        {
+          "id": "B1-B-32",
+          "row": 4,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51H-999.99",
+            "type": "ev",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:49",
+            "checkInRaw": "2026-06-15T21:49:43.867Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "ev"
+        }
+      ],
+      "layout": {
+        "rows": 5,
+        "cols": 10,
+        "driveways": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "G",
+      "name": "Tầng trệt G",
+      "description": "Khu Ưu Tiên & Trả Khách Nhanh",
+      "zones": [
+        {
+          "name": "A",
+          "type": "handicap",
+          "count": 6
+        },
+        {
+          "name": "B",
+          "type": "suv",
+          "count": 14
+        },
+        {
+          "name": "C",
+          "type": "car",
+          "count": 12
+        }
+      ],
+      "slots": [
+        {
+          "id": "G-A-01",
+          "row": 0,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51G-888.88",
+            "type": "handicap",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:02",
+            "checkInRaw": "2026-06-15T14:02:15.231Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "handicap"
+        },
+        {
+          "id": "G-A-02",
+          "row": 0,
+          "col": 1,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "handicap"
+        },
+        {
+          "id": "G-A-03",
+          "row": 0,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "handicap",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:00",
+            "checkInRaw": "2026-06-15T15:00:54.651Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "handicap"
+        },
+        {
+          "id": "G-A-04",
+          "row": 0,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-555.22",
+            "type": "handicap",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:20",
+            "checkInRaw": "2026-06-15T15:20:35.627Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "handicap"
+        },
+        {
+          "id": "G-A-05",
+          "row": 0,
+          "col": 4,
+          "status": "maintenance",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "handicap"
+        },
+        {
+          "id": "G-A-06",
+          "row": 0,
+          "col": 5,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "handicap"
+        },
+        {
+          "id": "G-B-07",
+          "row": 2,
+          "col": 0,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-08",
+          "row": 2,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30L-345.67",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:00",
+            "checkInRaw": "2026-06-15T20:00:44.791Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-09",
+          "row": 2,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30M-567.89",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:12",
+            "checkInRaw": "2026-06-15T19:12:04.148Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-10",
+          "row": 2,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30K-456.78",
+            "type": "suv",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:57",
+            "checkInRaw": "2026-06-15T16:57:27.437Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-11",
+          "row": 2,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30E-987.65",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:22",
+            "checkInRaw": "2026-06-15T19:22:29.149Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-12",
+          "row": 2,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "suv",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:51",
+            "checkInRaw": "2026-06-15T16:51:16.223Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-13",
+          "row": 2,
+          "col": 6,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-14",
+          "row": 3,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:48",
+            "checkInRaw": "2026-06-15T20:48:08.830Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-15",
+          "row": 3,
+          "col": 1,
+          "status": "maintenance",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-16",
+          "row": 3,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30F-234.56",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:44",
+            "checkInRaw": "2026-06-15T18:44:13.423Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-17",
+          "row": 3,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30F-234.56",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:03",
+            "checkInRaw": "2026-06-16T01:03:04.790Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-18",
+          "row": 3,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51H-999.99",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "05:14",
+            "checkInRaw": "2026-06-15T22:14:33.613Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-19",
+          "row": 3,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30E-987.65",
+            "type": "suv",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "20:38",
+            "checkInRaw": "2026-06-15T13:38:57.777Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-B-20",
+          "row": 3,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "75A-888.99",
+            "type": "suv",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:50",
+            "checkInRaw": "2026-06-15T14:50:45.661Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "G-C-21",
+          "row": 5,
+          "col": 0,
+          "status": "maintenance",
+          "vehicle": null,
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-22",
+          "row": 5,
+          "col": 1,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-23",
+          "row": 5,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30F-234.56",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "20:43",
+            "checkInRaw": "2026-06-15T13:43:25.783Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-24",
+          "row": 5,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-544.45",
+            "type": "car",
+            "checkInDate": "24/6/2026",
+            "checkInTime": "13:42",
+            "checkInRaw": "2026-06-24T06:42:56.265Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-25",
+          "row": 5,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-555.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:18",
+            "checkInRaw": "2026-06-15T19:18:32.013Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-26",
+          "row": 5,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-754.57",
+            "type": "car",
+            "checkInDate": "24/6/2026",
+            "checkInTime": "13:43",
+            "checkInRaw": "2026-06-24T06:43:02.694Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-27",
+          "row": 6,
+          "col": 0,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-28",
+          "row": 6,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-555.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:08",
+            "checkInRaw": "2026-06-15T19:08:02.209Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-29",
+          "row": 6,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30N-234.12",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "05:21",
+            "checkInRaw": "2026-06-15T22:21:45.262Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-30",
+          "row": 6,
+          "col": 3,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-31",
+          "row": 6,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43A-553.14",
+            "type": "car",
+            "checkInDate": "25/6/2026",
+            "checkInTime": "21:42",
+            "checkInRaw": "2026-06-25T14:42:28.955Z",
+            "evCharging": true,
+            "chargeProgress": 5,
+            "chargeSpeed": 7.2
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        },
+        {
+          "id": "G-C-32",
+          "row": 6,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29F-333.44",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:05",
+            "checkInRaw": "2026-06-15T21:05:35.105Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "C",
+          "zoneType": "car"
+        }
+      ],
+      "layout": {
+        "rows": 7,
+        "cols": 7,
+        "driveways": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "F1",
+      "name": "Tầng 1 (F1)",
+      "description": "Khu Đỗ Xe Tiêu Chuẩn",
+      "zones": [
+        {
+          "name": "A",
+          "type": "car",
+          "count": 24
+        },
+        {
+          "name": "B",
+          "type": "suv",
+          "count": 8
+        }
+      ],
+      "slots": [
+        {
+          "id": "F1-A-01",
+          "row": 0,
+          "col": 0,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-02",
+          "row": 0,
+          "col": 1,
+          "status": "maintenance",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-03",
+          "row": 0,
+          "col": 2,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-04",
+          "row": 0,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29D-444.11",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "07:28",
+            "checkInRaw": "2026-06-16T00:28:01.615Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-05",
+          "row": 0,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30E-987.65",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "07:08",
+            "checkInRaw": "2026-06-16T00:08:49.957Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-06",
+          "row": 0,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30F-234.56",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:37",
+            "checkInRaw": "2026-06-15T19:37:03.473Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-07",
+          "row": 0,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-666.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:08",
+            "checkInRaw": "2026-06-16T01:08:24.088Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-08",
+          "row": 0,
+          "col": 7,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30H-876.54",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:33",
+            "checkInRaw": "2026-06-15T16:33:35.008Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-09",
+          "row": 1,
+          "col": 0,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-10",
+          "row": 1,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29F-333.44",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:13",
+            "checkInRaw": "2026-06-15T14:13:23.551Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-11",
+          "row": 1,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51H-999.99",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:11",
+            "checkInRaw": "2026-06-15T23:11:38.547Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-12",
+          "row": 1,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29D-444.11",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "20:48",
+            "checkInRaw": "2026-06-15T13:48:44.684Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-13",
+          "row": 1,
+          "col": 4,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-14",
+          "row": 1,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51K-777.66",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:45",
+            "checkInRaw": "2026-06-15T18:45:33.223Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-15",
+          "row": 1,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-555.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:35",
+            "checkInRaw": "2026-06-15T18:35:59.682Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-16",
+          "row": 1,
+          "col": 7,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-17",
+          "row": 2,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30E-987.65",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:14",
+            "checkInRaw": "2026-06-15T20:14:55.972Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-18",
+          "row": 2,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-555.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:11",
+            "checkInRaw": "2026-06-15T18:11:30.589Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-19",
+          "row": 2,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:03",
+            "checkInRaw": "2026-06-15T18:03:11.755Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-20",
+          "row": 2,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:29",
+            "checkInRaw": "2026-06-15T21:29:04.206Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-21",
+          "row": 2,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43A-777.11",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:38",
+            "checkInRaw": "2026-06-15T16:38:27.824Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-22",
+          "row": 2,
+          "col": 5,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-23",
+          "row": 2,
+          "col": 6,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-A-24",
+          "row": 2,
+          "col": 7,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F1-B-25",
+          "row": 4,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29C-555.22",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:12",
+            "checkInRaw": "2026-06-16T01:12:03.646Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-26",
+          "row": 4,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51G-888.88",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:10",
+            "checkInRaw": "2026-06-16T01:10:26.697Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-27",
+          "row": 4,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30M-567.89",
+            "type": "suv",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:09",
+            "checkInRaw": "2026-06-15T15:09:48.530Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-28",
+          "row": 4,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30A-123.45",
+            "type": "suv",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "01:25",
+            "checkInRaw": "2026-06-15T18:25:05.298Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-29",
+          "row": 4,
+          "col": 4,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-30",
+          "row": 4,
+          "col": 5,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "suv",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-31",
+          "row": 4,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "suv",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:00",
+            "checkInRaw": "2026-06-15T15:00:51.587Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "B",
+          "zoneType": "suv"
+        },
+        {
+          "id": "F1-B-32",
+          "row": 4,
+          "col": 7,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "B",
+          "zoneType": "suv"
+        }
+      ],
+      "layout": {
+        "rows": 5,
+        "cols": 8,
+        "driveways": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "F2",
+      "name": "Tầng 2 (F2)",
+      "description": "Khu Dài Hạn & Đặt Trước",
+      "zones": [
+        {
+          "name": "A",
+          "type": "car",
+          "count": 28
+        }
+      ],
+      "slots": [
+        {
+          "id": "F2-A-01",
+          "row": 0,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51G-888.88",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "22:21",
+            "checkInRaw": "2026-06-15T15:21:13.462Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-02",
+          "row": 0,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-666.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:18",
+            "checkInRaw": "2026-06-16T01:18:40.307Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-03",
+          "row": 0,
+          "col": 2,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-04",
+          "row": 0,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30N-234.12",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:41",
+            "checkInRaw": "2026-06-15T14:41:10.896Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-05",
+          "row": 0,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "98A-999.00",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "21:35",
+            "checkInRaw": "2026-06-15T14:35:54.557Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-06",
+          "row": 0,
+          "col": 5,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-07",
+          "row": 0,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30F-234.56",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:54",
+            "checkInRaw": "2026-06-15T19:54:54.959Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-08",
+          "row": 1,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51K-777.66",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "04:19",
+            "checkInRaw": "2026-06-15T21:19:34.081Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-09",
+          "row": 1,
+          "col": 1,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-10",
+          "row": 1,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30H-876.54",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:32",
+            "checkInRaw": "2026-06-15T20:32:14.676Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-11",
+          "row": 1,
+          "col": 3,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29F-333.44",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:37",
+            "checkInRaw": "2026-06-15T17:37:59.029Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-12",
+          "row": 1,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29A-111.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "05:45",
+            "checkInRaw": "2026-06-15T22:45:13.326Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-13",
+          "row": 1,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "98A-999.00",
+            "type": "car",
+            "checkInDate": "15/6/2026",
+            "checkInTime": "23:06",
+            "checkInRaw": "2026-06-15T16:06:17.519Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-14",
+          "row": 1,
+          "col": 6,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30N-234.12",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:49",
+            "checkInRaw": "2026-06-15T23:49:20.593Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-15",
+          "row": 3,
+          "col": 0,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "30M-567.89",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "08:04",
+            "checkInRaw": "2026-06-16T01:04:51.017Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-16",
+          "row": 3,
+          "col": 1,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-17",
+          "row": 3,
+          "col": 2,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-18",
+          "row": 3,
+          "col": 3,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-19",
+          "row": 3,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "98A-999.00",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "00:32",
+            "checkInRaw": "2026-06-15T17:32:14.802Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-20",
+          "row": 3,
+          "col": 5,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-21",
+          "row": 3,
+          "col": 6,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-22",
+          "row": 4,
+          "col": 0,
+          "status": "reserved",
+          "vehicle": {
+            "plate": "ĐÃ ĐẶT CHỖ",
+            "type": "car",
+            "checkInDate": "-",
+            "checkInTime": "Đã đặt trước"
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-23",
+          "row": 4,
+          "col": 1,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-666.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "02:37",
+            "checkInRaw": "2026-06-15T19:37:54.216Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-24",
+          "row": 4,
+          "col": 2,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "29F-333.44",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "03:27",
+            "checkInRaw": "2026-06-15T20:27:29.988Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-25",
+          "row": 4,
+          "col": 3,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-26",
+          "row": 4,
+          "col": 4,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "51G-888.88",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "06:07",
+            "checkInRaw": "2026-06-15T23:07:28.948Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-27",
+          "row": 4,
+          "col": 5,
+          "status": "occupied",
+          "vehicle": {
+            "plate": "43B-666.22",
+            "type": "car",
+            "checkInDate": "16/6/2026",
+            "checkInTime": "07:06",
+            "checkInRaw": "2026-06-16T00:06:00.188Z",
+            "evCharging": false,
+            "chargeProgress": null,
+            "chargeSpeed": null
+          },
+          "zoneName": "A",
+          "zoneType": "car"
+        },
+        {
+          "id": "F2-A-28",
+          "row": 4,
+          "col": 6,
+          "status": "available",
+          "vehicle": null,
+          "zoneName": "A",
+          "zoneType": "car"
+        }
+      ],
+      "layout": {
+        "rows": 5,
+        "cols": 7,
+        "driveways": [
+          2
+        ]
+      }
+    }
+  ],
+  "rates": {
+    "car": 20000,
+    "suv": 30000,
+    "ev": 20000,
+    "motorbike": 5000,
+    "handicap": 3000,
+    "evChargingSurcharge": 15000
+  },
+  "vehicleTypes": {
+    "car": "Ô tô tiêu chuẩn",
+    "suv": "SUV / Xe cỡ lớn",
+    "ev": "Ô tô điện (EV)",
+    "motorbike": "Xe máy",
+    "handicap": "Xe ưu tiên / Khuyết tật"
+  },
+  "alerts": [
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 43A-553.14 đỗ tại ô G-C-31 (Tầng trệt G).",
+      "time": "21:42:28"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "21:41:12"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Driver.",
+      "time": "11:10:29"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "11:10:27"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Driver.",
+      "time": "11:10:27"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "11:10:26"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Driver.",
+      "time": "11:10:26"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "11:10:26"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Driver.",
+      "time": "11:10:23"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "11:10:17"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Driver.",
+      "time": "11:10:11"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "11:10:10"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Driver.",
+      "time": "11:10:10"
+    },
+    {
+      "type": "info",
+      "message": "Admin thay đổi vai trò của tài khoản khoa thành Staff.",
+      "time": "11:10:09"
+    },
+    {
+      "type": "success",
+      "message": "[Mobile App] Xe 43A-553.14 đã tự thanh toán trực tuyến 17.500đ và yêu cầu mở cổng.",
+      "time": "09:35:03"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 43A-553.14 đỗ tại ô G-C-31 (Tầng trệt G).",
+      "time": "09:35:00"
+    },
+    {
+      "type": "success",
+      "message": "Xe 75A-977.65 (Ô tô tiêu chuẩn) đã đăng ký đỗ tại ô B1-A-06.",
+      "time": "15:32:15"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng A nhận diện biển kiểm soát: 75A-977.65 thành công.",
+      "time": "15:32:14"
+    },
+    {
+      "type": "success",
+      "message": "[Mobile App] Xe 51H-33333 đã tự thanh toán trực tuyến 17.500đ và yêu cầu mở cổng.",
+      "time": "15:18:09"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 51H-33333 đỗ tại ô B1-A-06 (Tầng hầm B1).",
+      "time": "15:17:57"
+    },
+    {
+      "type": "success",
+      "message": "[Mobile App] Xe 51K-22222 đã tự thanh toán trực tuyến 15.000đ và yêu cầu mở cổng.",
+      "time": "15:17:13"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 51K-22222 đỗ tại ô G-B-07 (Tầng trệt G).",
+      "time": "15:16:43"
+    },
+    {
+      "type": "success",
+      "message": "[Mobile App] Xe 11A-343.34 đã tự thanh toán trực tuyến 17.500đ và yêu cầu mở cổng.",
+      "time": "14:59:00"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 11A-343.34 đỗ tại ô B1-A-06 (Tầng hầm B1).",
+      "time": "14:58:52"
+    },
+    {
+      "type": "info",
+      "message": "Biểu phí dịch vụ giữ xe đã được cấu hình lại bởi quản trị viên.",
+      "time": "14:45:58"
+    },
+    {
+      "type": "success",
+      "message": "Xe 43A-777.11 thanh toán phí đỗ tại B1-A-06 thành công. Doanh thu bãi tăng 3.981.385 VND.",
+      "time": "14:15:54"
+    },
+    {
+      "type": "success",
+      "message": "Xe 51L-888.55 thanh toán phí đỗ tại G-C-31 thành công. Doanh thu bãi tăng 4.153.485 VND.",
+      "time": "14:15:37"
+    },
+    {
+      "type": "success",
+      "message": "[Mobile App] Xe 51K-111.11 đã tự thanh toán trực tuyến 10.000đ và yêu cầu mở cổng.",
+      "time": "14:02:25"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 51K-111.11 đỗ tại ô F1-A-03 (Tầng 1 (F1)).",
+      "time": "14:00:26"
+    },
+    {
+      "type": "success",
+      "message": "[Mobile App] Xe 31V-454.45 đã tự thanh toán trực tuyến 10.000đ và yêu cầu mở cổng.",
+      "time": "13:59:50"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 31V-454.45 đỗ tại ô F1-A-03 (Tầng 1 (F1)).",
+      "time": "13:59:16"
+    },
+    {
+      "type": "info",
+      "message": "Reset ô đỗ F2-A-06 về trạng thái trống khả dụng.",
+      "time": "13:44:32"
+    },
+    {
+      "type": "success",
+      "message": "Xe 29A-111.22 thanh toán phí đỗ tại B2-B-35 thành công. Doanh thu bãi tăng 4.167.037 VND.",
+      "time": "13:43:35"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng B nhận dạng thành công xe biển số: 29A-111.22 ở lối ra.",
+      "time": "13:43:35"
+    },
+    {
+      "type": "success",
+      "message": "Xe 29C-754.57 (Ô tô tiêu chuẩn) đã đăng ký đỗ tại ô G-C-26.",
+      "time": "13:43:02"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng A nhận diện biển kiểm soát: 29C-754.57 thành công.",
+      "time": "13:43:01"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng A nhận diện biển kiểm soát: 30H-479.66 thành công.",
+      "time": "13:43:01"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng A nhận diện biển kiểm soát: 30F-839.36 thành công.",
+      "time": "13:43:01"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng A nhận diện biển kiểm soát: 29A-337.98 thành công.",
+      "time": "13:43:01"
+    },
+    {
+      "type": "success",
+      "message": "Xe 43B-544.45 (Ô tô tiêu chuẩn) đã đăng ký đỗ tại ô G-C-24.",
+      "time": "13:42:56"
+    },
+    {
+      "type": "success",
+      "message": "Xe 43B-544.45 (Ô tô tiêu chuẩn) đã đăng ký đỗ tại ô B1-A-20.",
+      "time": "13:42:50"
+    },
+    {
+      "type": "success",
+      "message": "Xe 43B-544.45 (Ô tô tiêu chuẩn) đã đăng ký đỗ tại ô B1-A-17.",
+      "time": "13:42:41"
+    },
+    {
+      "type": "success",
+      "message": "Xe 43B-544.45 (Ô tô tiêu chuẩn) đã đăng ký đỗ tại ô B1-A-15.",
+      "time": "13:42:38"
+    },
+    {
+      "type": "success",
+      "message": "Xe 30F-234.56 thanh toán phí đỗ tại F1-A-16 thành công. Doanh thu bãi tăng 4.043.207 VND.",
+      "time": "13:41:26"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng B nhận dạng thành công xe biển số: 30F-234.56 ở lối ra.",
+      "time": "13:41:25"
+    },
+    {
+      "type": "success",
+      "message": "Xe 30F-234.56 thanh toán phí đỗ tại B2-A-22 thành công. Doanh thu bãi tăng 1.028.999 VND.",
+      "time": "13:41:02"
+    },
+    {
+      "type": "info",
+      "message": "Camera Cổng B nhận dạng thành công xe biển số: 30F-234.56 ở lối ra.",
+      "time": "13:41:01"
+    },
+    {
+      "type": "info",
+      "message": "Reset ô đỗ F1-A-24 về trạng thái trống khả dụng.",
+      "time": "13:40:33"
+    },
+    {
+      "type": "info",
+      "message": "Đã lưu cấu hình đặt trước cho ô đỗ F1-A-23.",
+      "time": "13:40:26"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 31A-311.32 đỗ tại ô B1-A-13 (Tầng hầm B1).",
+      "time": "09:08:12"
+    },
+    {
+      "type": "info",
+      "message": "[Mobile] Người dùng đăng ký xe 31A-311.31 đỗ tại ô B1-A-11 (Tầng hầm B1).",
+      "time": "09:07:05"
+    },
+    {
+      "type": "success",
+      "message": "Trạm sạc EV thông báo: Phương tiện 30K-456.78 tại ô đỗ B2-B-46 đã hoàn tất sạc pin 100%.",
+      "time": "09:05:40"
+    }
+  ],
+  "revenue": 19281613,
+  "users": [
+    {
+      "fullname": "Huỳnh Đăng khoa",
+      "phone": "0378599249",
+      "address": "123",
+      "username": "khoa",
+      "password": "123",
+      "role": "staff"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Capacitor/Android build outputs and caches
+/android/app/build/
+/android/build/
+/android/captmp/
+/android/.gradle/
+/android/local.properties
+
+# Local env files
+.env
+.env.local
+
+# Large generated APK files
+*.apk

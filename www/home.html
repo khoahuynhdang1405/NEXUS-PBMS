@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEXUS PBMS - Hệ thống quản lý tòa nhà đỗ xe tự động thế hệ mới.">
+    <title>NEXUS - Hệ thống Quản lý Đỗ xe Thông minh</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --color-bg-dark: #0B0B0F;
+            --color-bg-card: #12121A;
+            --color-primary: #00E5FF;
+            --color-primary-glow: rgba(0, 229, 255, 0.35);
+            --color-success: #39FF14;
+            --color-success-glow: rgba(57, 255, 20, 0.25);
+            --color-warning: #FFB300;
+            --color-danger: #FF0055;
+            --color-text-main: #F5F5FA;
+            --color-text-muted: #8E8E9F;
+            --color-border: rgba(255, 255, 255, 0.08);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Background grid/dots decoration */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Nav */
+        header {
+            border-bottom: 1px solid var(--color-border);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(11, 11, 15, 0.8);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px var(--color-primary-glow);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, var(--color-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #000;
+            box-shadow: 0 0 15px var(--color-primary-glow);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px var(--color-primary);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--color-border);
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(0, 229, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero-title span {
+            color: var(--color-primary);
+            text-shadow: 0 0 20px var(--color-primary-glow);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--color-text-muted);
+            margin-bottom: 36px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Hero Image Showcase */
+        .hero-image-box {
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+            aspect-ratio: 1.5;
+        }
+
+        .hero-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .hero-image-box:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Gallery / Facilities Section */
+        .gallery-section {
+            padding: 100px 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .gallery-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 229, 255, 0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .gallery-img-wrapper {
+            width: 100%;
+            aspect-ratio: 1.6;
+            overflow: hidden;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .gallery-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-card:hover .gallery-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 24px;
+        }
+
+        .gallery-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .gallery-desc {
+            color: var(--color-text-muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            color: var(--color-text-muted);
+            font-size: 16px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .feature-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 229, 255, 0.25);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            background-color: rgba(0, 229, 255, 0.1);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .feature-name {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-desc {
+            color: var(--color-text-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Interactive Calculator Section */
+        .interactive-section {
+            padding: 100px 0;
+            border-top: 1px solid var(--color-border);
+            background-color: rgba(255,255,255,0.01);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .calc-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+        .calc-form-group {
+            margin-bottom: 24px;
+        }
+
+        .calc-label {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            margin-bottom: 10px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .calc-select-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .calc-option {
+            background-color: rgba(255,255,255,0.02);
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .calc-option.active {
+            background-color: rgba(0, 229, 255, 0.1);
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            box-shadow: 0 0 10px rgba(0,229,255,0.15);
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .calc-slider {
+            flex-grow: 1;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .calc-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            cursor: pointer;
+            box-shadow: 0 0 8px var(--color-primary);
+            transition: 0.2s;
+        }
+
+        .calc-sliderValue {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            min-width: 80px;
+            text-align: right;
+            color: var(--color-primary);
+        }
+
+        .calc-result {
+            margin-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-label {
+            font-size: 16px;
+            color: var(--color-text-muted);
+        }
+
+        .result-amount {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--color-success);
+            text-shadow: 0 0 15px var(--color-success-glow);
+        }
+
+        .rate-card {
+            background: linear-gradient(135deg, rgba(20,20,30,0.6), rgba(15,15,22,0.6));
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .rate-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .rate-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            padding-bottom: 12px;
+        }
+
+        .rate-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .rate-name {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rate-val {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: var(--color-primary);
+            box-shadow: 0 0 10px var(--color-primary);
+            opacity: 0.3;
+        }
+
+        .stat-num {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .stat-label {
+            color: var(--color-text-muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--color-border);
+            background-color: #08080C;
+            padding: 60px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 64px;
+            margin-bottom: 40px;
+        }
+
+        .footer-desc {
+            color: var(--color-text-muted);
+            font-size: 14px;
+            margin-top: 16px;
+            line-height: 1.6;
+        }
+
+        .footer-links-title {
+            font-family: var(--font-display);
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.03);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.25);
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            .hero {
+                padding: 120px 0 60px 0;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .calc-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo-group">
+                <img src="nexus_parking_logo.png" alt="NEXUS Logo" class="logo-img">
+                <span class="logo-text">NEXUS</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#features">Hệ Thống</a></li>
+                <li><a href="#gallery">Hạ Tầng</a></li>
+                <li><a href="#rates">Bảng Giá</a></li>
+                <li><a href="#live-stats">Thống Kê</a></li>
+            </ul>
+            
+            <div class="nav-cta">
+                <a href="mobile.html" class="btn btn-secondary"><i data-lucide="smartphone"></i> Cổng Tài Xế</a>
+                <a href="index.html" class="btn btn-primary"><i data-lucide="layout-dashboard"></i> Bảng Điều Hành</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1 class="hero-title">Đỗ Xe Thông Minh Thế Hệ Mới Cùng <span>NEXUS</span></h1>
+                <p class="hero-subtitle">Hệ thống quản lý tòa nhà đỗ xe tự động (PBMS). Tích hợp nhận diện camera ANPR cổng vào, tự động phân phối vị trí đỗ, thanh toán trực quan và quản lý lưới sạc xe điện EV thời gian thực.</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="btn btn-primary"><i data-lucide="play"></i> Mở Bảng Điều Hành Web</a>
+                    <a href="mobile.html" class="btn btn-secondary">Vào Cổng Tài Xế Mobile</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-box">
+                <img src="nexus_parking_hero.png" alt="Bãi đỗ xe thông minh NEXUS">
+                <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 4px; font-size: 11px; color: var(--color-primary); font-weight: bold; border: 1px solid rgba(0,229,255,0.2);">
+                    Phối cảnh bãi xe thông minh NEXUS
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Facilities Section (Replaces ANPR Simulator) -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hệ Thống Hạ Tầng Bãi Xe Hiện Đại</h2>
+                <p class="section-desc">Hình ảnh phối cảnh và thông tin thực tế về các trang thiết bị thông minh được vận hành tại tòa nhà đỗ xe NEXUS.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="anpr_gate_mockup.png" alt="Cổng vào quét biển số ANPR">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Cổng Kiểm Soát ANPR Tự Động</h3>
+                        <p class="gallery-desc">Hệ thống camera ANPR tự động quét và nhận diện biển số xe chỉ dưới 1 giây, điều khiển mở rào chắn tự động mà không cần nhân viên quẹt thẻ tay.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="ev_charging_mockup.png" alt="Trạm sạc xe điện EV">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Trạm Sạc Điện EV Thông Minh</h3>
+                        <p class="gallery-desc">Tích hợp các vị trí đỗ sạc xe điện chuyên dụng tại tầng G. Có tính năng theo dõi tiến trình sạc, tự động ngắt khi đầy và cộng phụ phí trực tiếp vào hóa đơn.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="floor_guidance_mockup.png" alt="Bản đồ chỉ dẫn đỗ xe">
+                    </div>
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">Bản Đồ Hướng Dẫn Kỹ Thuật Số</h3>
+                        <p class="gallery-desc">Hệ thống bảng hiệu LED chỉ đường và bản đồ mini 2D hỗ trợ tài xế xác định nhanh vị trí ô đỗ trống được phân phối để di chuyển dễ dàng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Các Phân Hệ Cốt Lõi</h2>
+                <p class="section-desc">Kiến trúc phần mềm tích hợp đa nền tảng tối ưu hóa vận hành tòa nhà đỗ xe.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box"><i data-lucide="layout-dashboard"></i></div>
+                    <h3 class="feature-name">Web Console Vận Hành</h3>
+                    <p class="feature-desc">Màn hình giám sát bản đồ trực quan cho điều hành viên. Quản lý danh sách người gửi, thống kê doanh thu biểu đồ, và phân quyền quản trị Staff/Admin.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box"><i data-lucide="smartphone"></i></div>
+                    <h3 class="feature-name">Mobile App Tài Xế</h3>
+                    <p class="feature-desc">Ứng dụng di động đống gói APK từ Capacitor. Cho phép đăng ký/nhập, đặt chỗ tự động trước khi tới bãi, hiển thị QR code e-Ticket và theo dõi cước.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box"><i data-lucide="database"></i></div>
+                    <h3 class="feature-name">Cơ Sở Dữ Liệu PostgreSQL</h3>
+                    <p class="feature-desc">Giải pháp lưu trữ quan hệ hiệu năng cao. Phân tách rõ các bảng dữ liệu Users, Floors, Slots, Active Vehicles và Logs lịch sử hệ thống.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section class="interactive-section" id="rates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trình Tính Phí Giữ Xe Động</h2>
+                <p class="section-desc">Chọn loại phương tiện và kéo số giờ gửi để ước lượng tổng số tiền cần thanh toán theo biểu giá hiện hành.</p>
+            </div>
+            
+            <div class="calc-grid">
+                <!-- Calculator -->
+                <div class="calc-card">
+                    <div class="calc-form-group">
+                        <label class="calc-label">Chọn Loại Phương Tiện</label>
+                        <div class="calc-select-group">
+                            <div class="calc-option active" data-rate="20000" data-ev="false">Ô tô tiêu chuẩn</div>
+                            <div class="calc-option" data-rate="30000" data-ev="false">SUV / Bán tải</div>
+                            <div class="calc-option" data-rate="35000" data-ev="true">Xe Điện (Sạc EV)</div>
+                        </div>
+                        <div class="calc-select-group" style="grid-template-columns: 1fr 1fr;">
+                            <div class="calc-option" data-rate="5000" data-ev="false">Xe Máy</div>
+                            <div class="calc-option" data-rate="10000" data-ev="false">Xe khuyết tật / Ưu tiên</div>
+                        </div>
+                    </div>
+                    <div class="calc-form-group">
+                        <label class="calc-label">Thời Gian Gửi (Giờ)</label>
+                        <div class="slider-container">
+                            <input type="range" min="1" max="24" value="2" class="calc-slider" id="hoursSlider">
+                            <span class="calc-sliderValue" id="hoursValue">2 giờ</span>
+                        </div>
+                    </div>
+                    <div class="calc-result">
+                        <span class="result-label">Tổng cước phí ước tính:</span>
+                        <span class="result-amount" id="calcPrice">40.000 VND</span>
+                    </div>
+                </div>
+                
+                <!-- Rates Table -->
+                <div class="rate-card">
+                    <h3 class="calc-label" style="margin-bottom: 20px;">Bảng Giá Niêm Yết Hiện Tại</h3>
+                    <ul class="rate-list">
+                        <li class="rate-item">
+                            <span class="rate-name"><i data-lucide="car" style="width: 16px; color: var(--color-primary);"></i> Ô tô con tiêu chuẩn</span>
+                            <span class="rate-val">20.000 VND/giờ</span>
+                        </li>
+                        <li class="rate-item">
+                            <span class="rate-name"><i data-lucide="car" style="width: 16px; color: var(--color-primary);"></i> SUV / Xe du lịch lớn</span>
+                            <span class="rate-val">30.000 VND/giờ</span>
+                        </li>
+                        <li class="rate-item">
+                            <span class="rate-name"><i data-lucide="zap" style="width: 16px; color: var(--color-warning);"></i> Vị trí đỗ sạc xe điện EV</span>
+                            <span class="rate-val">20.000 VND/giờ</span>
+                        </li>
+                        <li class="rate-item">
+                            <span class="rate-name"><i data-lucide="zap" style="width: 16px; color: var(--color-warning);"></i> Phụ phí sạc điện EV</span>
+                            <span class="rate-val">+15.000 VND/giờ</span>
+                        </li>
+                        <li class="rate-item">
+                            <span class="rate-name"><i data-lucide="motorcycle" style="width: 16px; color: var(--color-primary);"></i> Xe máy các loại</span>
+                            <span class="rate-val">5.000 VND/giờ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="live-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trạng Thế Hệ Thống Thực Tế</h2>
+                <p class="section-desc">Chỉ số thực trạng bãi xe lấy trực tiếp thông qua kết nối API CSDL PostgreSQL.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num" id="stat-total">140</div>
+                    <div class="stat-label">Tổng Ô Đỗ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" id="stat-available" style="color: var(--color-success);">82</div>
+                    <div class="stat-label">Đang Trống</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" id="stat-occupied" style="color: var(--color-danger);">58</div>
+                    <div class="stat-label">Đã Có Xe</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" id="stat-revenue" style="color: var(--color-primary);">--</div>
+                    <div class="stat-label">Tổng Doanh Thu (VND)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="logo-group">
+                        <img src="nexus_parking_logo.png" alt="NEXUS Logo" style="width:32px;height:32px;" class="logo-img">
+                        <span class="logo-text" style="font-size:20px;">NEXUS</span>
+                    </a>
+                    <p class="footer-desc">Hệ thống quản lý tòa nhà đỗ xe thông minh thế hệ mới có tính khả dụng cao. Tích hợp quét biển số ANPR, trạm sạc điện xe EV và đồng bộ cơ sở dữ liệu quan hệ đa nền tảng.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-links-title">Cổng Truy Cập Nhanh</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Bảng Vận Hành Web Console</a></li>
+                        <li><a href="mobile.html">Giao Diện Driver App Mobile</a></li>
+                        <li><a href="Software_Requirement_Specification_NEXUS.doc">Tải Đặc Tả Yêu Cầu SRS (.doc)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXUS Team. Created for NEXUS Team.</p>
+                <p>Phiên bản 1.0 (PostgreSQL Active)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Khởi tạo icons Lucide
+        lucide.createIcons();
+
+        // Trình Tính Giá Đỗ Xe
+        const hoursSlider = document.getElementById('hoursSlider');
+        const hoursValue = document.getElementById('hoursValue');
+        const calcPrice = document.getElementById('calcPrice');
+        const calcOptions = document.querySelectorAll('.calc-option');
+        
+        let selectedRate = 20000;
+
+        calcOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                calcOptions.forEach(o => o.classList.remove('active'));
+                opt.classList.add('active');
+                selectedRate = parseInt(opt.getAttribute('data-rate'));
+                updatePrice();
+            });
+        });
+
+        hoursSlider.addEventListener('input', () => {
+            hoursValue.textContent = `${hoursSlider.value} giờ`;
+            updatePrice();
+        });
+
+        function updatePrice() {
+            const hours = parseInt(hoursSlider.value);
+            const total = selectedRate * hours;
+            calcPrice.textContent = `${total.toLocaleString('vi-VN')} VND`;
+        }
+
+        // Đồng Bộ Thống Kê Live từ Express API
+        async function fetchLiveStats() {
+            try {
+                const res = await fetch('/api/state');
+                if (res.ok) {
+                    const data = await res.json();
+                    
+                    let totalSlots = 0;
+                    let occupiedSlots = 0;
+                    
+                    data.floors.forEach(f => {
+                        totalSlots += f.slots.length;
+                        occupiedSlots += f.slots.filter(s => s.status === 'occupied').length;
+                    });
+                    
+                    const availableSlots = totalSlots - occupiedSlots;
+                    
+                    document.getElementById('stat-total').textContent = totalSlots;
+                    document.getElementById('stat-available').textContent = availableSlots;
+                    document.getElementById('stat-occupied').textContent = occupiedSlots;
+                    
+                    if (data.revenue !== undefined) {
+                        document.getElementById('stat-revenue').textContent = (data.revenue).toLocaleString('vi-VN');
+                    }
+                }
+            } catch (e) {
+                console.log("Không thể kết nối API. Giữ nguyên chỉ số giả lập.");
+            }
+        }
+
+        fetchLiveStats();
+        setInterval(fetchLiveStats, 4000); // Polling đồng bộ thống kê mỗi 4s
+    </script>
+</body>
+</html>

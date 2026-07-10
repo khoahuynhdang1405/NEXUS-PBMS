@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Driver Mobile App</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body class="mobile-body">
+    <!-- Stylized Phone Container for Desktop View (WOW Factor) -->
+    <div class="phone-wrapper">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+            <!-- Phone Status Bar -->
+            <div class="phone-status-bar">
+                <span id="phone-clock">08:30</span>
+                <div class="status-icons">
+                    <i data-lucide="wifi"></i>
+                    <i data-lucide="signal"></i>
+                    <div class="phone-battery">
+                        <div class="battery-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 0A: Mobile Login Screen -->
+            <div id="view-mob-login" class="mobile-view active">
+                <div class="app-header">
+                    <div class="logo-circle"><i data-lucide="parking-square"></i></div>
+                    <h2>NEXUS PARKING</h2>
+                    <p>Hệ thống Quản lý Tòa nhà Đỗ xe Thông minh</p>
+                </div>
+                <div class="form-card">
+                    <h3>ĐĂNG NHẬP DRIVER</h3>
+                    <p class="form-desc">Vui lòng đăng nhập tài khoản của bạn để sử dụng dịch vụ đỗ xe.</p>
+                    <form id="mob-login-form">
+                        <div class="input-group">
+                            <label for="mob-login-username">Tài khoản</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="mob-login-username" placeholder="Nhập tài khoản..." required autocomplete="username" style="text-transform: none !important;">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="mob-login-password">Mật khẩu</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="lock"></i>
+                                <input type="password" id="mob-login-password" placeholder="Nhập mật khẩu..." required autocomplete="current-password">
+                            </div>
+                        </div>
+                        <div id="mob-login-error" class="error-msg-box" style="margin-top: 10px;">Tài khoản hoặc mật khẩu không chính xác!</div>
+                        <button type="submit" class="btn-action pulse-effect" style="margin-top: 15px;">
+                            Đăng Nhập <i data-lucide="log-in" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+                        </button>
+                    </form>
+                    <div style="text-align: center; margin-top: 20px; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 15px;">
+                        <a href="#" id="link-mob-open-register" style="color: var(--accent-color); font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                            <i data-lucide="user-plus" style="width: 14px; height: 14px;"></i> Đăng ký tài khoản mới
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 0B: Mobile Register Screen -->
+            <div id="view-mob-register" class="mobile-view">
+                <div class="app-header">
+                    <div class="logo-circle"><i data-lucide="user-plus"></i></div>
+                    <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+                    <p>Tạo tài khoản Driver để sử dụng dịch vụ đỗ xe</p>
+                </div>
+                <div class="form-card">
+                    <h3>ĐĂNG KÝ THÀNH VIÊN</h3>
+                    <p class="form-desc">Vui lòng điền đầy đủ các thông tin cá nhân dưới đây.</p>
+                    <form id="mob-register-form">
+                        <div class="input-group">
+                            <label for="mob-reg-fullname">Họ và tên</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="user-check"></i>
+                                <input type="text" id="mob-reg-fullname" placeholder="Nhập họ và tên..." required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="mob-reg-phone">Số điện thoại</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="phone"></i>
+                                <input type="text" id="mob-reg-phone" placeholder="Nhập số điện thoại..." required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="mob-reg-address">Địa chỉ nhà</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="map-pin"></i>
+                                <input type="text" id="mob-reg-address" placeholder="Nhập địa chỉ nhà..." required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="mob-reg-username">Tài khoản</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="mob-reg-username" placeholder="Nhập tên tài khoản..." required autocomplete="username" style="text-transform: none !important;">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="mob-reg-password">Mật khẩu</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="lock"></i>
+                                <input type="password" id="mob-reg-password" placeholder="Nhập mật khẩu..." required autocomplete="new-password">
+                            </div>
+                        </div>
+                        <div id="mob-reg-error" class="error-msg-box" style="margin-top: 10px;"></div>
+                        <div id="mob-reg-success" class="success-msg-box hidden" style="margin-top: 10px; display: none; background-color: rgba(0, 255, 102, 0.08); color: var(--color-success); border: 1px solid rgba(0, 255, 102, 0.15); border-radius: 8px; padding: 10px; font-size: 11px; font-weight: 600; text-align: center;">Đăng ký tài khoản thành công!</div>
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <button type="submit" class="btn-action pulse-effect" style="flex: 1; height: 38px;">Đăng Ký</button>
+                            <button type="button" class="btn-action btn-danger" id="btn-mob-close-register" style="flex: 1; background: rgba(255,0,85,0.1); border: 1px solid rgba(255,0,85,0.2); color: var(--color-error); height: 38px;">Quay Lại</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- View 1: Welcome & Quick Spot Request (Chưa vào bãi) -->
+            <div id="view-welcome" class="mobile-view">
+                <div class="app-header">
+                    <div class="logo-circle"><i data-lucide="parking-square"></i></div>
+                    <h2>NEXUS PARKING</h2>
+                    <p>Hệ thống tự động cấp vị trí đỗ xe thông minh</p>
+                    <div class="server-status-badge-wrapper" style="text-align: center; margin-top: 10px;">
+                        <span id="mob-server-status" class="badge" style="font-size: 10px; padding: 4px 10px; border-radius: 12px; background-color: rgba(255,0,85,0.1); color: var(--color-error); border: 1px solid rgba(255,0,85,0.2); display: inline-flex; align-items: center; gap: 5px; font-weight: 700; letter-spacing: 0.5px;">
+                            <span class="status-dot" style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-error);"></span>
+                            MÁY CHỦ NGOẠI TUYẾN
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3>Nhận Vị Trí Đỗ Xe Nhanh</h3>
+                    <p class="form-desc">Nhập biển số xe của bạn dưới đây, hệ thống AI sẽ tự động phân tích và cấp ô đỗ xe trống tối ưu gần nhất.</p>
+                    
+                    <form id="mobile-checkin-form">
+                        <div class="input-group">
+                            <label for="mob-plate">Biển kiểm soát xe</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="credit-card"></i>
+                                <input type="text" id="mob-plate" placeholder="Ví dụ: 30A-123.45" uppercase required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mob-type">Loại phương tiện</label>
+                            <div class="input-with-icon">
+                                <i data-lucide="car"></i>
+                                <select id="mob-type">
+                                    <option value="car">Ô tô tiêu chuẩn</option>
+                                    <option value="suv">SUV / Xe cỡ lớn</option>
+                                    <option value="ev">Ô tô điện (EV)</option>
+                                    <option value="motorbike">Xe máy</option>
+                                    <option value="handicap">Xe ưu tiên / Khuyết tật</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-group" id="mob-ev-toggle-wrapper">
+                            <label class="switch">
+                                <input type="checkbox" id="mob-ev-charge" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="checkbox-text">
+                                <span>Cắm sạc xe điện EV</span>
+                                <p>Tự động kích hoạt trạm sạc điện tại ô đỗ</p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-action pulse-effect">
+                            <i data-lucide="key-round"></i> Cấp Ô Đỗ Xe Tự Động
+                        </button>
+                    </form>
+                    <div id="mob-checkin-error" class="error-msg-box"></div>
+
+                    <!-- Cấu hình máy chủ API & Đăng xuất -->
+                    <div class="server-config-link-wrapper" style="text-align: center; margin-top: 20px; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 15px; display: flex; justify-content: center; gap: 20px;">
+                        <a href="#" id="toggle-server-config" style="color: var(--text-secondary); font-size: 11px; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; opacity: 0.8; transition: opacity 0.2s;">
+                            <i data-lucide="settings" style="width: 13px; height: 13px;"></i>
+                            <span>Cấu hình máy chủ</span>
+                        </a>
+                        <a href="#" id="btn-mob-logout" style="color: var(--color-error); font-size: 11px; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; opacity: 0.8; transition: opacity 0.2s; font-weight: 600;">
+                            <i data-lucide="log-out" style="width: 13px; height: 13px;"></i>
+                            <span>Đăng xuất</span>
+                        </a>
+                    </div>
+                    
+                    <div id="server-config-card" class="hidden" style="margin-top: 15px; padding-top: 10px;">
+                        <h4 style="font-size: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: var(--accent-color);">
+                            <i data-lucide="server" style="width: 14px; height: 14px;"></i>
+                            ĐỊA CHỈ MÁY CHỦ
+                        </h4>
+                        <div class="input-group" style="margin-bottom: 8px;">
+                            <div class="input-with-icon">
+                                <i data-lucide="globe"></i>
+                                <input type="text" id="mob-server-url" placeholder="http://192.168.1.X:8080 hoặc URL Tunnel" style="font-size: 12px; padding: 8px 8px 8px 32px; height: 36px;">
+                            </div>
+                        </div>
+                        <button type="button" id="btn-save-server-url" class="btn-action" style="padding: 6px 12px; font-size: 12px; height: 32px;">
+                            Lưu cấu hình
+                        </button>
+                        <div id="server-config-success" class="success-msg-box hidden" style="margin-top: 8px; font-size: 11px; padding: 6px; background-color: var(--color-success-bg); color: var(--color-success); border: 1px solid rgba(0, 255, 102, 0.2); border-radius: 6px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 2: Parking Guidance & Status (Đang trong bãi) -->
+            <div id="view-navigation" class="mobile-view">
+                <div class="app-nav-header">
+                    <span>ĐÃ CẤP PHÁT THÀNH CÔNG</span>
+                    <h2 id="nav-assigned-spot">TẦNG B2 - Ô B2-B-08</h2>
+                </div>
+
+                <div class="scroll-content">
+                    <!-- Dynamic mini map navigation guide -->
+                    <div class="nav-map-card">
+                        <div class="map-overlay-guide">
+                            <i data-lucide="compass" class="nav-compass"></i>
+                            <span>Bấm giữ sơ đồ để phóng to lối đi</span>
+                        </div>
+                        <!-- Guidance floor grid visualization -->
+                        <div class="mini-grid-container" id="mini-map-grid">
+                            <!-- Populated dynamically by mobile.js -->
+                        </div>
+                    </div>
+
+                    <!-- Spot Details Card -->
+                    <div class="details-card">
+                        <div class="detail-row">
+                            <span class="detail-lbl">Biển kiểm soát</span>
+                            <span class="detail-val" id="nav-plate">30A-123.45</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-lbl">Tầng khu vực</span>
+                            <span class="detail-val" id="nav-floor-name">Tầng hầm B2</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-lbl">Thời gian đỗ</span>
+                            <span class="detail-val text-accent" id="nav-duration">00 giờ 01 phút</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-lbl">Đơn giá giờ</span>
+                            <span class="detail-val" id="nav-rate">20,000đ/giờ</span>
+                        </div>
+                        <div class="detail-row total-row border-top">
+                            <span class="detail-lbl">Phí tích lũy</span>
+                            <span class="detail-val text-success" id="nav-cost">10,000đ</span>
+                        </div>
+                    </div>
+
+                    <!-- EV Charging Card (Visible only for EV active slots) -->
+                    <div class="details-card ev-charging-card hidden" id="mob-ev-card">
+                        <div class="ev-card-header">
+                            <div class="ev-card-title">
+                                <i data-lucide="zap"></i>
+                                <span>Trạm Sạc EV Khả Dụng</span>
+                            </div>
+                            <span class="ev-status-text animate-pulse">ĐANG SẠC</span>
+                        </div>
+                        <div class="battery-status-container">
+                            <div class="battery-gauge">
+                                <div class="battery-charge-level" id="mob-battery-fill" style="width: 45%;"></div>
+                                <span class="battery-percent" id="mob-battery-pct">45%</span>
+                            </div>
+                        </div>
+                        <div class="ev-details-grid">
+                            <div>
+                                <span>Công suất sạc</span>
+                                <strong id="mob-charge-speed">22 kW</strong>
+                            </div>
+                            <div>
+                                <span>Điện năng sạc</span>
+                                <strong id="mob-energy-used">4.2 kWh</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gate Pass Card with QR Code -->
+                    <div class="details-card qr-card">
+                        <h4>Mã Vé Đỗ Xe Điện Tử (e-Ticket)</h4>
+                        <p>Quét mã QR này tại các máy quét tự động ở cổng vào/ra để hoàn tất thủ tục mở barrier.</p>
+                        <div class="qr-code-wrapper">
+                            <div class="qr-border">
+                                <div class="qr-scanner-laser"></div>
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='white' stroke-width='2'><path d='M10 10h20v20H10zm5 5v10h10V15zm45-5h20v20H60zm5 5v10h10V15zM10 60h20v20H10zm5 5v10h10V65zM60 60h10v10H60zm10 10h10v10H70zm-10 10h10v10H60zm20-20h10v10H80zm0 20h10v10H80zm0-10h10v10H80z'/><rect x='45' y='45' width='10' height='10' fill='white'/></svg>" alt="Ticket QR">
+                            </div>
+                        </div>
+                        <span class="ticket-id" id="mob-ticket-id">NEX-9874-88A</span>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="btn-action btn-danger" id="btn-mob-checkout-request">
+                        <i data-lucide="receipt"></i> Thanh Toán & Ra Cổng
+                    </button>
+                </div>
+            </div>
+
+            <!-- View 3: Checkout Receipt & Success (Hóa đơn) -->
+            <div id="view-receipt" class="mobile-view">
+                <div class="app-header-receipt">
+                    <div class="success-icon"><i data-lucide="check-circle-2"></i></div>
+                    <h3>Thanh Toán Thành Công</h3>
+                    <p>Hệ thống đã nhận thanh toán. Vui lòng di chuyển ra khỏi bãi đỗ xe trong vòng 15 phút.</p>
+                </div>
+
+                <div class="form-card receipt-paper">
+                    <div class="receipt-cut"></div>
+                    <h4 class="receipt-header-title">HÓA ĐƠN ĐIỆN TỬ NEXUS</h4>
+                    <div class="receipt-body">
+                        <div class="receipt-row-mob"><span>Mã giao dịch:</span><span id="rec-id">TXN-0028481</span></div>
+                        <div class="receipt-row-mob"><span>Vị trí đỗ:</span><span id="rec-slot">B2-B-08</span></div>
+                        <div class="receipt-row-mob"><span>Biển kiểm soát:</span><span id="rec-plate">30A-123.45</span></div>
+                        <div class="receipt-row-mob"><span>Thời gian đỗ:</span><span id="rec-duration">01 giờ 45 phút</span></div>
+                        <div class="receipt-row-mob border-top-dashed"><span>Phí cơ bản:</span><span id="rec-base">35,000đ</span></div>
+                        <div class="receipt-row-mob" id="rec-ev-row"><span>Phụ phí sạc EV:</span><span id="rec-ev">15,000đ</span></div>
+                        <div class="receipt-row-mob total-row-mob border-top-double"><span>Tổng cộng:</span><span id="rec-total">50,000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="gate-release-anim-card">
+                    <div class="barrier-gate-sim">
+                        <div class="barrier-post"></div>
+                        <div class="barrier-arm open"></div>
+                        <span class="gate-indicator-text">CỔNG B - BARRIER MỞ TỰ ĐỘNG</span>
+                    </div>
+                </div>
+
+                <button class="btn-action mt-auto" id="btn-rec-done">
+                    <i data-lucide="check"></i> Hoàn Tất & Thoát
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Matrix particle canvas for styling context -->
+    <div class="bg-matrix"></div>
+
+    <!-- Script imports -->
+    <script src="mockData.js"></script>
+    <script src="mobile.js"></script>
+</body>
+</html>
